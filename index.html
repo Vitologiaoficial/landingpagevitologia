@@ -578,7 +578,36 @@ img,svg{display:block; max-width:100%;}
   background:var(--section);
   border-top:1px solid var(--border);
 }
-.story-inner{ max-width:680px; margin:0 auto; }
+.story-layout{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.story-photo{
+  flex-shrink:0;
+  width:100%;
+}
+.story-photo img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  border-radius:12px;
+  display:block;
+  margin:0 auto;
+  filter:saturate(0.85) contrast(1.05) brightness(1.03);
+}
+.story-photo figcaption{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  text-align:center;
+  margin-top:12px;
+  letter-spacing:0.3px;
+  font-style:italic;
+}
+.story-inner{ }
 .story-inner p{
   font-family:'Montserrat',sans-serif;
   font-size:17px;
@@ -604,6 +633,23 @@ img,svg{display:block; max-width:100%;}
 }
 @media (min-width:768px){
   .story{ padding:96px 0; }
+  .story-layout{
+    flex-direction:row;
+    align-items:flex-start;
+    gap:64px;
+  }
+  .story-photo{
+    width:42%;
+    position:sticky;
+    top:32px;
+  }
+  .story-photo img{
+    max-width:100%;
+    margin:0;
+  }
+  .story-inner{
+    flex:1;
+  }
   .story-inner p{ font-size:18px; }
 }
 
@@ -1017,19 +1063,28 @@ img,svg{display:block; max-width:100%;}
     <div class="section-head">
       <h2 class="section-title">¿Quién está detrás de Café y Capital?</h2>
     </div>
-    <div class="story-inner">
-      <p>De niña recuerdo ver anuncios por todas partes que decían: "Compro acciones de TELMEX". Siempre tuve curiosidad por entender qué significaban y por qué parecían tan importantes para algunas personas. Le pregunté a mi mamá. Le pregunté a otros adultos. Nadie supo explicármelo.</p>
-      <p>Años después me gradué de Administración Financiera. Aprendí cómo funcionaban los mercados, las acciones y muchas otras cosas técnicas. Pero seguía sin entender algo fundamental: ¿Por qué nadie hablaba de esto de una forma que una persona común pudiera entender?</p>
-      <p>Años más tarde, embarazada, viviendo en un país distinto al mío y preocupada por mi futuro financiero, decidí buscar ayuda. Agendé una llamada con una empresa de educación financiera porque pensé que finalmente encontraría una guía para empezar a construir patrimonio.</p>
-      <p><strong>Cancelaron la llamada.</strong></p>
+    <div class="story-layout">
 
-      <div class="story-quote">
-        <p>"Gracias por tu interés. No creemos ser las personas adecuadas para ayudarte en este momento."</p>
+      <figure class="story-photo">
+        <img src="logo/marisol-biblioteca.jpg" alt="Marisol investigando en la biblioteca, libreta en mano">
+        <figcaption>Marisol — investigando en la biblioteca donde nació Café y Capital</figcaption>
+      </figure>
+
+      <div class="story-inner">
+        <p>De niña recuerdo ver anuncios por todas partes que decían: "Compro acciones de TELMEX". Siempre tuve curiosidad por entender qué significaban y por qué parecían tan importantes para algunas personas. Le pregunté a mi mamá. Le pregunté a otros adultos. Nadie supo explicármelo.</p>
+        <p>Años después me gradué de Administración Financiera. Aprendí cómo funcionaban los mercados, las acciones y muchas otras cosas técnicas. Pero seguía sin entender algo fundamental: ¿Por qué nadie hablaba de esto de una forma que una persona común pudiera entender?</p>
+        <p>Años más tarde, embarazada, viviendo en un país distinto al mío y preocupada por mi futuro financiero, decidí buscar ayuda. Agendé una llamada con una empresa de educación financiera porque pensé que finalmente encontraría una guía para empezar a construir patrimonio.</p>
+        <p><strong>Cancelaron la llamada.</strong></p>
+
+        <div class="story-quote">
+          <p>"Gracias por tu interés. No creemos ser las personas adecuadas para ayudarte en este momento."</p>
+        </div>
+
+        <p>No te voy a negar que leer eso fue frustrante, pero hoy estoy convencida que fue una de las mejores cosas que me pudieron pasar. Tenía el tiempo y tenía preguntas, así que decidí investigar por mi cuenta.</p>
+        <p>En poco más de un año aprendí más sobre dinero, patrimonio y construcción de riqueza que en años de educación formal. Pero sobre todo entendí algo: muchas veces la respuesta no es más información. Es tener un espacio para hacer mejores preguntas.</p>
+        <p>Y fue precisamente esa búsqueda la que terminó cambiando el rumbo de mi vida. Lo que comenzó como una inquietud personal terminó convirtiéndose en una obsesión por entender cómo funciona realmente el dinero y por qué tan pocas personas tienen acceso a conversaciones como esta.</p>
       </div>
 
-      <p>No te voy a negar que leer eso fue frustrante, pero hoy estoy convencida que fue una de las mejores cosas que me pudieron pasar. Tenía el tiempo y tenía preguntas, así que decidí investigar por mi cuenta.</p>
-      <p>En poco más de un año aprendí más sobre dinero, patrimonio y construcción de riqueza que en años de educación formal. Pero sobre todo entendí algo: muchas veces la respuesta no es más información. Es tener un espacio para hacer mejores preguntas.</p>
-      <p>Y fue precisamente esa búsqueda la que terminó cambiando el rumbo de mi vida. Lo que comenzó como una inquietud personal terminó convirtiéndose en una obsesión por entender cómo funciona realmente el dinero y por qué tan pocas personas tienen acceso a conversaciones como esta.</p>
     </div>
   </div>
 </section>
