@@ -1,489 +1,1208 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café y Capital — Invierte con Inteligencia</title>
-  <meta name="description" content="Únete a Café y Capital: la membresía en español para dominar tus finanzas personales, invertir con estrategia y construir riqueza a largo plazo.">
-  <meta name="keywords" content="inversiones, finanzas personales, educación financiera, español, comunidad, bolsa de valores">
-  <meta name="author" content="Café y Capital">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cafeycapital.com">
-  <meta property="og:title" content="Café y Capital — Invierte con Inteligencia">
-  <meta property="og:description" content="La membresía en español para dominar tus finanzas e invertir con confianza.">
-  <meta property="og:image" content="https://cafeycapital.com/og.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Café y Capital">
-  <meta name="twitter:description" content="Finanzas e inversiones en español. Únete ahora.">
-  <link rel="canonical" href="https://cafeycapital.com">
-  <style>
-    :root {
-      --bg: #080D18;
-      --bg2: #0D1526;
-      --card: #111D35;
-      --gold: #C9A227;
-      --gold2: #E8C84A;
-      --text: #E6EDF3;
-      --muted: #8B949E;
-      --border: rgba(201,162,39,0.18);
-      --r: 12px;
-    }
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth;font-size:16px}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
-    img{max-width:100%;height:auto;display:block}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+<meta charset="UTF-8">
+<title>Café y Capital — Hero</title>
 
-    /* ── ANNOUNCEMENT BAR ── */
-    .ann{background:linear-gradient(90deg,#7B3F00,#C9A227,#7B3F00);background-size:200% 100%;animation:shimmer 3s linear infinite;text-align:center;padding:9px 20px;font-size:.8rem;font-weight:700;color:#000;letter-spacing:.5px}
-    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1536709284792590');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'Café y Capital - Clase Magistral',
+  content_category: 'Evento educativo en vivo',
+  value: 79.00,
+  currency: 'USD'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1536709284792590&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
 
-    /* ── NAV ── */
-    .nav{position:sticky;top:0;z-index:999;background:rgba(8,13,24,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:12px 0}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .nav-logo img{height:42px;width:auto}
-    .btn-nav{display:inline-block;padding:10px 22px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:800;font-size:.85rem;border-radius:50px;transition:transform .2s,box-shadow .2s;white-space:nowrap}
-    .btn-nav:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,162,39,.45)}
+@font-face{
+  font-family:'DM Serif Display';
+  src:url('fonts/dm-serif-display-latin-400-normal.woff2') format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-400-normal.woff2') format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-500-normal.woff2') format('woff2');
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-600-normal.woff2') format('woff2');
+  font-weight:600; font-style:normal; font-display:swap;
+}
 
-    /* ── HERO ── */
-    .hero{padding:90px 0 70px;text-align:center;background:radial-gradient(ellipse 80% 60% at 50% -5%,rgba(30,45,90,.9) 0%,transparent 65%)}
-    .badge{display:inline-flex;align-items:center;gap:7px;padding:6px 16px;background:rgba(201,162,39,.12);border:1px solid rgba(201,162,39,.3);border-radius:50px;color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;margin-bottom:28px}
-    .hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:22px;letter-spacing:-.5px}
-    .hero h1 .g{color:var(--gold)}
-    .hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--muted);max-width:600px;margin:0 auto 48px;line-height:1.75}
+:root{
+  --bg:#F7F7F5;
+  --section:#F2F2EF;
+  --card:#ECEBE7;
+  --text-1:#1F1F1C;
+  --text-2:#666660;
+  --border:#E4E3DE;
+  --gold:#C4A04A;
+  --gold-hover:#D0AE5B;
+}
 
-    /* ── COUNTDOWN ── */
-    .cd-wrap{margin:0 auto 44px;max-width:520px}
-    .cd-label{font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:14px;font-weight:600}
-    .cd-row{display:flex;justify-content:center;gap:12px}
-    .cd-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 14px;min-width:84px;text-align:center;position:relative;overflow:hidden}
-    .cd-box::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(201,162,39,.06) 0%,transparent 100%)}
-    .cd-num{display:block;font-size:2.4rem;font-weight:900;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
-    .cd-unit{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:1.8px;color:var(--muted);margin-top:6px;font-weight:600}
-    .cd-sep{font-size:2rem;font-weight:900;color:var(--gold);align-self:center;opacity:.5;margin-top:-8px}
+*{box-sizing:border-box; margin:0; padding:0;}
 
-    /* ── CTAs ── */
-    .hero-cta{display:flex;flex-direction:column;align-items:center;gap:14px}
-    .btn-hero{display:inline-block;padding:18px 48px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:900;font-size:1.05rem;border-radius:50px;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 24px rgba(201,162,39,.35);letter-spacing:.3px}
-    .btn-hero:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(201,162,39,.55)}
-    .guarantee{font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:6px}
-    .guarantee svg{color:var(--gold)}
+html,body{
+  background:var(--bg);
+  color:var(--text-1);
+  font-family:'Montserrat',-apple-system,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
 
-    /* ── STATS ── */
-    .stats{padding:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
-    .stats-grid{display:flex;justify-content:center;gap:0;flex-wrap:wrap}
-    .stat{flex:1;min-width:140px;text-align:center;padding:20px 16px;border-right:1px solid var(--border)}
-    .stat:last-child{border-right:none}
-    .stat-num{font-size:2rem;font-weight:900;color:var(--gold);display:block}
-    .stat-txt{font-size:.8rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+img,svg{display:block; max-width:100%;}
 
-    /* ── SECTIONS ── */
-    .section{padding:80px 0}
-    .sec-tag{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);font-weight:700;margin-bottom:12px}
-    .sec-title{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:900;color:#fff;margin-bottom:16px;letter-spacing:-.3px}
-    .sec-sub{font-size:1.02rem;color:var(--muted);max-width:540px;line-height:1.75}
-    .center-text{text-align:center}
-    .center-text .sec-sub{margin:0 auto}
+/* ===== HEADER ===== */
+.site-header{
+  width:100%;
+  background:var(--section);
+  border-bottom:1px solid var(--border);
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:180px;
+}
+.logo img{ width:42px; height:42px; flex-shrink:0; object-fit:contain;}
+.logo-text{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:18px;
+  letter-spacing:0.5px;
+  color:var(--text-1);
+  line-height:1;
+  white-space:nowrap;
+}
 
-    /* ── BENEFITS ── */
-    .benefits{background:var(--bg2)}
-    .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:48px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px;transition:transform .2s,border-color .2s}
-    .card:hover{transform:translateY(-4px);border-color:rgba(201,162,39,.4)}
-    .card-icon{font-size:2rem;margin-bottom:18px;display:block}
-    .card h3{font-size:1.02rem;font-weight:700;color:#fff;margin-bottom:8px}
-    .card p{font-size:.88rem;color:var(--muted);line-height:1.65}
+/* ===== CONTAINER ===== */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px;
+}
 
-    /* ── FOR WHO ── */
-    .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:40px}
-    .who-item{display:flex;align-items:flex-start;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:20px}
-    .who-check{color:var(--gold);font-size:1.1rem;flex-shrink:0;margin-top:2px;font-weight:900}
-    .who-item p{font-size:.92rem;color:var(--text);line-height:1.55}
+/* ===== HERO ===== */
+.hero{
+  padding:48px 0 80px;
+}
 
-    /* ── TESTIMONIALS ── */
-    .testimonials{background:var(--bg2)}
-    .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:48px}
-    .tcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px}
-    .stars{color:var(--gold);font-size:.9rem;letter-spacing:3px;margin-bottom:16px}
-    .tcard blockquote{font-size:.9rem;color:var(--muted);line-height:1.75;font-style:italic;margin-bottom:20px}
-    .author{display:flex;align-items:center;gap:12px}
-    .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#7B3F00);display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:.95rem;flex-shrink:0}
-    .author-info strong{display:block;font-size:.88rem;color:#fff}
-    .author-info small{font-size:.75rem;color:var(--muted)}
+.eyebrow{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:20px;
+}
 
-    /* ── OFFER ── */
-    .offer{text-align:center;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(30,45,90,.6) 0%,transparent 70%)}
-    .offer-card{max-width:540px;margin:44px auto 0;background:var(--card);border:1px solid rgba(201,162,39,.35);border-radius:20px;padding:48px 40px;box-shadow:0 8px 52px rgba(201,162,39,.1)}
-    .offer-badge{display:inline-block;padding:5px 16px;background:var(--gold);color:#000;font-weight:900;font-size:.75rem;border-radius:50px;margin-bottom:20px;text-transform:uppercase;letter-spacing:1.5px}
-    .offer-title{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:6px}
-    .offer-sub{color:var(--muted);font-size:.9rem;margin-bottom:28px}
-    .offer-price{font-size:3.2rem;font-weight:900;color:#fff;line-height:1}
-    .offer-price sup{font-size:1.4rem;vertical-align:super;color:var(--gold)}
-    .offer-period{color:var(--muted);font-size:.9rem;margin:8px 0 28px}
-    .offer-list{list-style:none;text-align:left;margin:0 0 32px}
-    .offer-list li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.9rem;color:var(--text)}
-    .offer-list li:last-child{border-bottom:none}
-    .chk{color:var(--gold);font-weight:900;font-size:1rem}
-    .btn-offer{display:block;width:100%;padding:17px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:900;font-size:1.05rem;border-radius:50px;text-align:center;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 24px rgba(201,162,39,.35)}
-    .btn-offer:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,162,39,.5)}
-    .secure{margin-top:14px;font-size:.78rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px}
+.headline-wrap{
+  border-left:3px solid var(--gold);
+  padding-left:20px;
+  margin-bottom:32px;
+}
 
-    /* ── FAQ ── */
-    .faq-wrap{max-width:700px;margin:44px auto 0}
-    .faq-item{border:1px solid var(--border);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
-    .faq-btn{width:100%;background:var(--card);border:none;padding:20px 24px;text-align:left;color:#fff;font-size:.95rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background .2s;font-family:inherit}
-    .faq-btn:hover{background:rgba(201,162,39,.06)}
-    .faq-icon{color:var(--gold);font-size:1.3rem;line-height:1;flex-shrink:0;transition:transform .3s;font-weight:300}
-    .faq-body{background:var(--card);overflow:hidden;max-height:0;transition:max-height .35s ease,padding .25s}
-    .faq-body p{padding:0 24px;color:var(--muted);font-size:.9rem;line-height:1.75}
-    .faq-item.open .faq-body{max-height:200px;padding-bottom:20px}
-    .faq-item.open .faq-icon{transform:rotate(45deg)}
+.headline{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  font-size:56px;
+  line-height:1.08;
+  color:var(--text-1);
+  max-width:560px;
+}
+.headline .line{ display:block; }
 
-    /* ── FOOTER ── */
-    footer{background:#050810;border-top:1px solid var(--border);padding:44px 0 24px}
-    .footer-top{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;margin-bottom:32px}
-    .footer-logo img{height:36px}
-    .footer-tagline{font-size:.85rem;color:var(--muted)}
-    .footer-links{display:flex;gap:28px;flex-wrap:wrap;justify-content:center}
-    .footer-links a{font-size:.82rem;color:var(--muted);transition:color .2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-copy{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;text-align:center;font-size:.75rem;color:var(--muted);opacity:.5}
+.copy{
+  max-width:560px;
+  margin-bottom:36px;
+}
+.copy p{
+  font-family:'Montserrat',sans-serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.7;
+  color:var(--text-2);
+  margin-bottom:18px;
+}
+.copy p.emphasis{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-style:italic;
+  font-size:21px;
+  line-height:1.4;
+  color:var(--text-1);
+  margin-bottom:6px;
+}
+.copy p.emphasis:last-child{ margin-bottom:18px; }
 
-    /* ── MOBILE ── */
-    @media(max-width:640px){
-      .hero{padding:60px 0 50px}
-      .hero h1{font-size:1.85rem}
-      .cd-box{min-width:68px;padding:14px 8px}
-      .cd-num{font-size:1.9rem}
-      .cd-sep{display:none}
-      .btn-hero{padding:15px 32px;font-size:.95rem}
-      .stats-grid{flex-direction:column;gap:0}
-      .stat{border-right:none;border-bottom:1px solid var(--border)}
-      .stat:last-child{border-bottom:none}
-      .offer-card{padding:32px 22px}
-      .offer-price{font-size:2.4rem}
-      .section{padding:60px 0}
-    }
-  </style>
+/* ===== CTA ===== */
+.cta-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  width:100%;
+  min-height:64px;
+  padding:14px 28px;
+  background:var(--gold);
+  color:#FFFFFF;
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:16px;
+  line-height:1.3;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:none;
+  border-radius:999px;
+  cursor:pointer;
+  transition:background 200ms ease, transform 200ms ease;
+  margin-bottom:28px;
+}
+.cta-btn:hover{ background:var(--gold-hover); transform:translateY(-2px); }
+
+/* ===== HERO DOOR IMAGE ===== */
+.hero-door{
+  width:100%;
+  margin:80px 0;
+  text-align:center;
+}
+.hero-door img{
+  width:100%;
+  border-radius:0;
+  display:block;
+}
+.hero-door figcaption{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  text-align:center;
+  margin-top:16px;
+}
+@media (min-width:768px){
+  .hero-door{ max-width:800px; width:70%; margin-left:auto; margin-right:auto; }
+}
+
+/* ===== EVENT INFO (tarjeta editorial) ===== */
+.event-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  background:var(--card);
+  border:1px solid rgba(196,160,74,0.35);
+  border-radius:16px;
+  padding:24px;
+  max-width:560px;
+  margin-bottom:48px;
+}
+.event-info .row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:16px;
+  color:var(--text-2);
+}
+.event-info .row .icon{ font-size:16px; }
+.event-info .row.date{
+  font-weight:600;
+  color:var(--text-1);
+  font-size:17px;
+}
+.event-info .price{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  color:var(--text-1);
+  font-size:25px;
+  margin-top:4px;
+}
+
+/* ===== COUNTER ===== */
+.counter-block{
+  text-align:center;
+  padding-top:8px;
+}
+.counter-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  color:var(--text-2);
+  margin-bottom:20px;
+  line-height:1.5;
+}
+.counter-grid{
+  display:flex;
+  justify-content:center;
+  gap:32px;
+}
+.counter-item{ text-align:center; }
+.counter-num{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:28px;
+  color:var(--text-1);
+  line-height:1;
+  margin-bottom:6px;
+}
+.counter-unit{
+  font-family:'Montserrat',sans-serif;
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--text-2);
+}
+
+/* ===== VIDEO PLACEHOLDER (Hero) ===== */
+.video-placeholder{
+  width:100%;
+  background:var(--card);
+  border:1px solid var(--gold);
+  border-radius:16px;
+  padding:14px 20px;
+  margin-top:28px;
+  margin-bottom:24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.vp-label{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--text-2);
+  opacity:0.6;
+  margin-bottom:10px;
+}
+.vp-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  font-size:20px;
+  line-height:1.25;
+  color:var(--text-1);
+  max-width:380px;
+  margin-bottom:8px;
+}
+.vp-sub{
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  color:var(--text-2);
+  margin-bottom:2px;
+}
+.vp-duration{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  opacity:0.8;
+}
+@media (min-width:768px){
+  .video-placeholder{ padding:24px 32px; margin-top:48px; margin-bottom:32px; max-width:900px; width:85%; margin-left:auto; margin-right:auto; }
+  .vp-title{ font-size:26px; max-width:480px; }
+}
+
+/* ===== TABLET (768px) ===== */
+@media (min-width:768px){
+  .site-header{ padding:20px 48px; }
+  .logo{ width:200px; }
+  .logo-text{ font-size:20px; }
+  .container{ padding:0 48px; }
+  .hero{ padding:64px 0 96px; }
+  .headline{ font-size:66px; max-width:600px; }
+  .copy p{ font-size:19px; }
+  .copy p.emphasis{ font-size:23px; }
+  .copy{ max-width:600px; }
+  .event-info{ max-width:600px; padding:32px; }
+  .cta-btn{ width:auto; padding:14px 48px; }
+  .counter-grid{ gap:48px; }
+}
+
+/* ===== DESKTOP (1024px+) — two column hero ===== */
+@media (min-width:1024px){
+  .site-header{ padding:24px 64px; }
+  .logo{ width:220px; }
+  .logo-text{ font-size:22px; }
+  .container{ padding:0 64px; }
+  .hero{ padding:96px 0 0; }
+
+  .hero-row{
+    margin-bottom:80px;
+  }
+  .hero-content{ max-width:900px; margin:0 auto; }
+
+  .eyebrow{ font-size:16px; margin-bottom:24px; }
+  .headline-wrap{ padding-left:24px; margin-bottom:36px; }
+  .headline{ font-size:80px; line-height:1.08; max-width:700px; }
+  .copy{ max-width:640px; margin-bottom:40px; }
+  .copy p{ font-size:20px; }
+  .copy p.emphasis{ font-size:25px; }
+  .cta-btn{ width:auto; padding:14px 56px; margin-bottom:36px; }
+  .event-info{ margin-bottom:0; max-width:560px; }
+
+  .counter-block{ padding:48px 0 80px; border-top:1px solid var(--border); }
+}
+
+/* ===== SECTION 02 — ¿QUÉ ES EXACTAMENTE ESTO? ===== */
+.section-02{
+  padding:64px 0 80px;
+  border-top:1px solid var(--border);
+  background:var(--section);
+}
+.section-head{
+  max-width:680px;
+  margin:0 auto;
+  text-align:center;
+  margin-bottom:48px;
+}
+.section-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  font-size:36px;
+  line-height:1.1;
+  color:var(--text-1);
+  margin-bottom:24px;
+}
+.section-copy p{
+  font-family:'Montserrat',sans-serif;
+  font-size:18px;
+  line-height:1.7;
+  color:var(--text-2);
+  margin-bottom:16px;
+}
+.section-list{ margin:24px 0; }
+.section-list p{
+  font-family:'Montserrat',sans-serif;
+  font-weight:500;
+  font-size:18px;
+  line-height:1.6;
+  color:var(--text-1);
+  margin-bottom:8px;
+}
+
+.pricing-card{
+  max-width:560px;
+  margin:0 auto;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:32px 24px;
+}
+.pc-meta-row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:24px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--border);
+}
+.pc-meta-row .row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  color:var(--text-2);
+}
+.pc-price{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:48px;
+  color:var(--text-1);
+  text-align:center;
+  margin-bottom:24px;
+}
+.pricing-card .cta-btn{ width:100%; margin-bottom:28px; }
+.pc-edition{
+  text-align:center;
+  margin-bottom:24px;
+}
+.pc-edition p{
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  line-height:1.7;
+  color:var(--text-2);
+}
+.pc-edition p:first-child{
+  font-weight:600;
+  color:var(--text-1);
+  margin-bottom:4px;
+}
+.pc-guarantee{
+  border-top:1px solid var(--border);
+  padding-top:20px;
+  text-align:center;
+}
+.pc-guarantee-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:14px;
+  color:var(--text-1);
+  margin-bottom:8px;
+}
+.pc-guarantee-text{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--text-2);
+}
+
+@media (min-width:768px){
+  .section-02{ padding:96px 0; }
+  .section-title{ font-size:42px; }
+  .section-copy p{ font-size:19px; }
+  .pricing-card{ padding:48px; }
+  .pc-price{ font-size:52px; }
+}
+
+@media (min-width:1024px){
+  .section-02{ padding:128px 0; }
+  .section-title{ font-size:52px; }
+  .section-head{ margin-bottom:64px; }
+  .pc-meta-row{ flex-direction:row; justify-content:center; flex-wrap:wrap; gap:24px; }
+}
+
+/* ===== SECTION 03 — ¿POR QUÉ SOLO 30 LUGARES? ===== */
+.section-30{
+  padding:64px 0;
+  text-align:center;
+}
+.section-30 .section-copy{ max-width:560px; margin:0 auto 32px; }
+.section-30-row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:22px;
+  color:var(--text-1);
+}
+@media (min-width:768px){
+  .section-30{ padding:96px 0; }
+  .section-30-row{ flex-direction:row; justify-content:center; gap:16px; font-size:26px; }
+  .section-30-row span:not(:last-child)::after{ content:"·"; margin-left:16px; color:var(--gold); }
+}
+
+/* ===== SECTION 04 — ¿POR QUÉ ESTA CONVERSACIÓN IMPORTA AHORA? ===== */
+.section-why{
+  padding:64px 0;
+  background:var(--section);
+  border-top:1px solid var(--border);
+}
+.section-why .section-head{ margin-bottom:32px; }
+.pull-quote{
+  max-width:640px;
+  margin:40px auto;
+  padding-left:20px;
+  border-left:3px solid var(--gold);
+  font-family:'DM Serif Display',Georgia,serif;
+  font-style:italic;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text-1);
+}
+@media (min-width:768px){
+  .section-why{ padding:96px 0; }
+  .pull-quote{ font-size:28px; }
+}
+
+/* ===== SECTION 05 — TRANSFORMACIÓN ===== */
+.transformation{ padding:64px 0; }
+.transform-grid{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  max-width:900px;
+  margin:0 auto;
+}
+.transform-col{
+  flex:1;
+  padding:28px 24px;
+  border-radius:16px;
+}
+.transform-col.before{ background:var(--section); }
+.transform-col.after{ background:var(--card); border:1px solid var(--gold); }
+.transform-label{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:13px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.transform-col.before .transform-label{ color:var(--text-2); }
+.transform-col.after .transform-label{ color:var(--gold); }
+.transform-col ul{ list-style:none; }
+.transform-col li{
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:14px;
+  padding-left:22px;
+  position:relative;
+}
+.transform-col.before li{ color:var(--text-2); }
+.transform-col.before li::before{ content:"×"; position:absolute; left:0; color:var(--text-2); opacity:0.6; }
+.transform-col.after li{ color:var(--text-1); font-weight:500; }
+.transform-col.after li::before{ content:"✓"; position:absolute; left:0; color:var(--gold); }
+@media (min-width:768px){
+  .transformation{ padding:96px 0; }
+  .transform-grid{ flex-direction:row; }
+}
+
+/* ===== SECTION 06 — HISTORIA DE MARISOL ===== */
+.story{
+  padding:64px 0;
+  background:var(--section);
+  border-top:1px solid var(--border);
+}
+.story-inner{ max-width:680px; margin:0 auto; }
+.story-inner p{
+  font-family:'Montserrat',sans-serif;
+  font-size:17px;
+  line-height:1.75;
+  color:var(--text-2);
+  margin-bottom:18px;
+}
+.story-inner p strong{ color:var(--text-1); font-weight:600; }
+.story-quote{
+  margin:32px 0;
+  padding:24px 28px;
+  background:var(--card);
+  border-left:3px solid var(--gold);
+  border-radius:0 12px 12px 0;
+}
+.story-quote p{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-style:italic;
+  font-size:19px;
+  line-height:1.5;
+  color:var(--text-1);
+  margin:0;
+}
+@media (min-width:768px){
+  .story{ padding:96px 0; }
+  .story-inner p{ font-size:18px; }
+}
+
+/* ===== SECTION 07 — QUÉ INCLUYE ===== */
+.includes{ padding:64px 0; }
+.includes-list{ max-width:700px; margin:0 auto; }
+.include-item{
+  display:flex;
+  gap:20px;
+  padding:28px 0;
+  border-bottom:1px solid var(--border);
+}
+.include-item:first-child{ padding-top:0; }
+.include-num{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:22px;
+  color:var(--gold);
+  flex-shrink:0;
+  width:36px;
+}
+.include-body h3{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:0.3px;
+  color:var(--text-1);
+  margin-bottom:8px;
+}
+.include-body p{
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  color:var(--text-2);
+  margin-bottom:6px;
+}
+.includes-recap{
+  max-width:560px;
+  margin:48px auto 0;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:32px 24px;
+  text-align:center;
+}
+.includes-recap .event-info{ margin:0 auto 24px; max-width:300px; }
+.includes-recap .cta-btn{ width:100%; }
+.includes-recap-sub{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  margin-bottom:20px;
+}
+@media (min-width:768px){
+  .includes{ padding:96px 0; }
+  .includes-recap{ padding:40px; }
+}
+
+/* ===== SECTION 08 — FAQ ===== */
+.faq{
+  padding:64px 0;
+  background:var(--section);
+  border-top:1px solid var(--border);
+}
+.faq-list{ max-width:680px; margin:0 auto; }
+.faq-item{
+  border-bottom:1px solid var(--border);
+}
+.faq-item summary{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  padding:22px 0;
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:16px;
+  color:var(--text-1);
+  cursor:pointer;
+  list-style:none;
+}
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary::after{
+  content:"+";
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:22px;
+  color:var(--gold);
+  flex-shrink:0;
+  transition:transform 200ms ease;
+}
+.faq-item[open] summary::after{ content:"–"; }
+.faq-item p{
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  color:var(--text-2);
+  padding-bottom:22px;
+  max-width:600px;
+}
+@media (min-width:768px){
+  .faq{ padding:96px 0; }
+}
+
+/* ===== SECTION 09 — CTA FINAL (única sección oscura) ===== */
+.final-cta{
+  padding:72px 0;
+  background:#232110;
+  text-align:center;
+}
+.final-cta-line{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:26px;
+  line-height:1.4;
+  color:#F5F5F2;
+  max-width:560px;
+  margin:0 auto 36px;
+}
+.final-cta .event-info{ max-width:340px; margin:0 auto 32px; background:transparent; border-color:rgba(255,255,255,0.2); }
+.final-cta .event-info .row{ color:#D6D4CE; }
+.final-cta .event-info .row.date{ color:#F5F5F2; }
+.final-cta .event-info .price{ color:#C4A04A; }
+.final-cta .cta-btn{ display:inline-flex; }
+@media (min-width:768px){
+  .final-cta{ padding:100px 0; }
+  .final-cta-line{ font-size:32px; }
+}
+
+/* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
+.site-footer{
+  padding:56px 0 40px;
+  text-align:center;
+  background:var(--bg);
+  border-top:1px solid var(--border);
+}
+.footer-logo-icon{
+  width:80px;
+  height:80px;
+  display:block;
+  margin:0 auto 14px;
+}
+.footer-brand-name{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:28px;
+  color:var(--text-1);
+  letter-spacing:0.5px;
+  margin-bottom:6px;
+}
+.footer-tagline{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  margin-bottom:28px;
+}
+.footer-social-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.3px;
+  color:var(--text-2);
+  margin-bottom:14px;
+}
+.footer-social-icons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-bottom:28px;
+}
+.footer-social-icons a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(196,160,74,0.4);
+  border-radius:50%;
+  color:var(--gold);
+  text-decoration:none;
+  transition:background 200ms ease, border-color 200ms ease;
+}
+.footer-social-icons a:hover{
+  background:rgba(196,160,74,0.12);
+  border-color:var(--gold);
+}
+.footer-social-icons svg{ width:18px; height:18px; }
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+.footer-links a{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  text-decoration:underline;
+}
+.footer-copy{
+  font-family:'Montserrat',sans-serif;
+  font-size:12px;
+  color:var(--text-2);
+  opacity:0.7;
+}
+.footer-copy a{ color:inherit; }
+</style>
+  <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "x9k7l4daan");
   </script>
 </head>
 <body>
 
-  <div class="ann">☕ Oferta de lanzamiento — Precio especial solo hasta el 5 de julio a las 11:59 PM &nbsp;|&nbsp; No se repite</div>
+<header class="site-header">
+  <div class="logo">
+    <img src="logo/icon-mark.png" alt="Café y Capital">
+    <span class="logo-text">CAFÉ Y CAPITAL</span>
+  </div>
+</header>
 
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOTAgNjgiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsMTIpIj48cmVjdCB4PSIwIiB5PSIxNiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjM0IiByeD0iMyIgZmlsbD0iIzdCNEEyQSIvPjxyZWN0IHg9Ii0zIiB5PSIxMCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iIzlCNjA0MCIvPjxwYXRoIGQ9Ik01MCAyNCBRNjUgMjQgNjUgMzQgUTY1IDQ0IDUwIDQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3QjRBMkEiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTEyIDggUTE2IDIgMTIgLTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNSA4IFEyOSAyIDI1IC0yIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUEyMjciIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzggOCBRNDIgMiAzOCAtMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBMjI3IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNzYiIHk9IjQzIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyNyIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNDOUEyMjciPkNhZiYjMjMzOyA8dHNwYW4gZmlsbD0iI0ZGRkZGRiI+eTwvdHNwYW4+IENhcGl0YWw8L3RleHQ+PC9nPjwvc3ZnPgo=" alt="Café y Capital">
+<section class="hero">
+  <div class="container">
+
+    <div class="hero-row">
+      <div class="hero-content">
+
+        <p class="eyebrow">Conectando los puntos detrás del dinero</p>
+
+        <div class="headline-wrap">
+          <h1 class="headline">
+            <span class="line">El mundo está cambiando más rápido de lo que podemos procesarlo.</span>
+          </h1>
+        </div>
+
+        <div class="copy">
+          <p>La mayoría de las personas sigue avanzando como siempre.</p>
+          <p>Trabajando.</p>
+          <p>Haciendo planes.</p>
+          <p>Esperando que las piezas eventualmente encajen.</p>
+          <p>Pero cada vez aparece con más frecuencia una sensación difícil de ignorar.</p>
+          <p>La sensación de que algo importante está ocurriendo debajo de la superficie.</p>
+          <p>Y quizá no te hayas dado cuenta, pero sigues usando un mapa que fue creado para una realidad que ya no existe por completo.</p>
+          <p>Café y Capital nació de una pregunta muy simple:</p>
+          <p>¿Cómo navegamos mejor el mundo en el que estamos mientras todavía está cambiando?</p>
+          <p>Esta no es una clase para aprender términos financieros.</p>
+          <p>Es una conversación para conectar ideas, observar patrones y entender qué está cambiando antes de que resulte evidente para todos.</p>
+          <p>Porque cuando empiezas a ver el mapa completo, las decisiones dejan de sentirse como reacciones.</p>
+          <p>Y empiezan a sentirse como elecciones conscientes.</p>
+
+          <p class="emphasis">La pregunta no es cuánto dinero tienes.</p>
+          <p class="emphasis">La pregunta es qué tan bien entiendes el mundo en el que estás tomando decisiones.</p>
+          <p class="emphasis">Y si todo esto realmente es importante...</p>
+          <p class="emphasis">¿por qué no lo estamos hablando más?</p>
+        </div>
+
+        <figure class="hero-door">
+          <img src="logo/puerta-oficial-optimized.jpg" alt="Una puerta entreabierta con el logotipo de Café y Capital">
+          <figcaption>Algunas preguntas terminan abriendo puertas inesperadas.</figcaption>
+        </figure>
+
+        <div class="event-info">
+          <div class="row date"><span class="icon">📅</span><span>7 de julio</span></div>
+          <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+          <div class="row"><span class="icon">⏱</span><span>90 minutos</span></div>
+          <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
+          <div class="row price"><span class="icon">💵</span><span>$79 USD</span></div>
+        </div>
+
+        <div class="video-placeholder">
+          <span class="vp-label">Video 01</span>
+          <h3 class="vp-title">¿Por qué existe Café y Capital?</h3>
+          <p class="vp-sub">Video de bienvenida</p>
+          <p class="vp-duration">Duración estimada: 2 minutos</p>
+        </div>
+
+        <a href="https://buy.stripe.com/eVq6oGcecaEJfHnaHmbfO01" class="cta-btn">Quiero entender el mapa</a>
+
+      </div>
+
+    </div>
+
+    <div class="counter-block">
+      <p class="counter-label">Las inscripciones cierran el 5 de julio a las 11:59 PM CDMX</p>
+      <div class="counter-grid" id="counter">
+        <div class="counter-item"><div class="counter-num" id="cd-days">—</div><div class="counter-unit">días</div></div>
+        <div class="counter-item"><div class="counter-num" id="cd-hours">—</div><div class="counter-unit">horas</div></div>
+        <div class="counter-item"><div class="counter-num" id="cd-mins">—</div><div class="counter-unit">minutos</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-02">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 class="section-title">¿Qué es exactamente esto?</h2>
+      <div class="section-copy">
+        <p>Una conversación en vivo de 90 minutos para entender algunos de los cambios más importantes que están ocurriendo detrás del dinero.</p>
+      </div>
+      <div class="section-list">
+        <p>No es un curso.</p>
+        <p>No es una recomendación de inversión.</p>
+        <p>Y no necesitas conocimientos previos.</p>
+      </div>
+      <div class="section-copy">
+        <p>Es un espacio para conectar los puntos, entender el contexto y desarrollar criterio propio en un momento en que las reglas detrás del dinero están cambiando.</p>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pc-meta-row">
+        <div class="row"><span class="icon">📅</span><span>7 de julio</span></div>
+        <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+        <div class="row"><span class="icon">⏱</span><span>90 min</span></div>
+        <div class="row"><span class="icon">💻</span><span>Zoom</span></div>
+      </div>
+
+      <div class="pc-price">$79 USD</div>
+
+      <a href="https://buy.stripe.com/eVq6oGcecaEJfHnaHmbfO01" class="cta-btn">Quiero entender esto antes que la mayoría</a>
+
+      <div class="pc-edition">
+        <p>Primera Edición – Miembros Fundadores</p>
+        <p>Solo 30 lugares</p>
+        <p>Reservas cierran el 5 de julio</p>
+        <p>Precio de esta edición: $79 USD · Próximas ediciones: $129 USD</p>
+      </div>
+
+      <div class="pc-guarantee">
+        <p class="pc-guarantee-title">✅ Garantía 100%</p>
+        <p class="pc-guarantee-text">Si al terminar la sesión consideras que no aportó valor a tu forma de entender lo que está ocurriendo, te devolvemos íntegramente tu dinero.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-30">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:32px;">
+      <h2 class="section-title">¿Por qué solo 30 lugares?</h2>
+      <div class="section-copy">
+        <p>Porque esto no es un webinar masivo. Prefiero una conversación real. Un grupo pequeño donde las preguntas importan, las respuestas tienen espacio y las ideas pueden explorarse con profundidad.</p>
+      </div>
+    </div>
+    <div class="section-30-row">
+      <span>30 personas</span>
+      <span>Una sala</span>
+      <span>Una conversación</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-why">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">¿Por qué esta conversación importa ahora?</h2>
+      <div class="section-copy">
+        <p>Durante años, lejos de los reflectores, las reglas detrás del dinero comenzaron a cambiar. Gobiernos, instituciones y empresas tecnológicas están destinando enormes recursos y atención a la forma en que el dinero se moverá en el futuro.</p>
+        <p>La mayoría de las personas escucha estos temas por separado. Pero pocas se detienen a preguntarse qué es exactamente lo que está cambiando.</p>
+      </div>
+    </div>
+
+    <p class="pull-quote">Piensa en lo que ocurrió cuando los teléfonos pasaron de ser una línea fija de casa a convertirse en un smartphone. Al principio parecía una mejora más. Pero con el tiempo esa mejora cambió la forma en que trabajamos, compramos, nos comunicamos y vivimos.</p>
+
+    <div class="section-head" style="margin-top:32px;">
+      <div class="section-copy">
+        <p>Algo similar está ocurriendo con el dinero. Y eso es precisamente lo que exploraremos en esta conversación: hacia dónde podría dirigirse el dinero y por qué vale la pena prestar atención ahora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="transformation">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">¿Qué cambia después de esta conversación?</h2>
+    </div>
+    <div class="transform-grid">
+      <div class="transform-col before">
+        <p class="transform-label">Antes de Café y Capital</p>
+        <ul>
+          <li>Ves noticias aisladas.</li>
+          <li>Escuchas opiniones contradictorias.</li>
+          <li>Sientes que algo está cambiando.</li>
+          <li>No sabes exactamente qué está pasando.</li>
+          <li>Tomas decisiones con información fragmentada.</li>
+        </ul>
+      </div>
+      <div class="transform-col after">
+        <p class="transform-label">Después de Café y Capital</p>
+        <ul>
+          <li>Entiendes qué fuerzas están impulsando los cambios.</li>
+          <li>Empiezas a conectar eventos que antes parecían independientes.</li>
+          <li>Desarrollas mejores preguntas.</li>
+          <li>Interpretas las noticias con más contexto.</li>
+          <li>Tomas decisiones desde la comprensión y no desde la confusión.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">¿Quién está detrás de Café y Capital?</h2>
+    </div>
+    <div class="story-inner">
+      <p>De niña recuerdo ver anuncios por todas partes que decían: "Compro acciones de TELMEX". Siempre tuve curiosidad por entender qué significaban y por qué parecían tan importantes para algunas personas. Le pregunté a mi mamá. Le pregunté a otros adultos. Nadie supo explicármelo.</p>
+      <p>Años después me gradué de Administración Financiera. Aprendí cómo funcionaban los mercados, las acciones y muchas otras cosas técnicas. Pero seguía sin entender algo fundamental: ¿Por qué nadie hablaba de esto de una forma que una persona común pudiera entender?</p>
+      <p>Años más tarde, embarazada, viviendo en un país distinto al mío y preocupada por mi futuro financiero, decidí buscar ayuda. Agendé una llamada con una empresa de educación financiera porque pensé que finalmente encontraría una guía para empezar a construir patrimonio.</p>
+      <p><strong>Cancelaron la llamada.</strong></p>
+
+      <div class="story-quote">
+        <p>"Gracias por tu interés. No creemos ser las personas adecuadas para ayudarte en este momento."</p>
+      </div>
+
+      <p>No te voy a negar que leer eso fue frustrante, pero hoy estoy convencida que fue una de las mejores cosas que me pudieron pasar. Tenía el tiempo y tenía preguntas, así que decidí investigar por mi cuenta.</p>
+      <p>En poco más de un año aprendí más sobre dinero, patrimonio y construcción de riqueza que en años de educación formal. Pero sobre todo entendí algo: muchas veces la respuesta no es más información. Es tener un espacio para hacer mejores preguntas.</p>
+      <p>Y fue precisamente esa búsqueda la que terminó cambiando el rumbo de mi vida. Lo que comenzó como una inquietud personal terminó convirtiéndose en una obsesión por entender cómo funciona realmente el dinero y por qué tan pocas personas tienen acceso a conversaciones como esta.</p>
+    </div>
+  </div>
+</section>
+
+<section class="includes">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">¿Qué incluye tu lugar?</h2>
+      <div class="section-copy"><p>Al reservar tu lugar tendrás acceso a:</p></div>
+    </div>
+
+    <div class="includes-list">
+      <div class="include-item">
+        <span class="include-num">01</span>
+        <div class="include-body">
+          <h3>Clase magistral en vivo — 90 minutos</h3>
+          <p>Una conversación diseñada para ayudarte a entender algunos de los cambios más importantes que están ocurriendo detrás del dinero. Exploraremos algunas de las señales que están transformando el sistema financiero y por qué tantos gobiernos, instituciones y empresas alrededor del mundo le están prestando tanta atención.</p>
+          <p>No desde la teoría. No desde el miedo. Y mucho menos desde predicciones. Sino desde el contexto. Porque cuando entiendes el contexto, los titulares dejan de parecer eventos aislados y comienzas a ver cómo encajan entre sí.</p>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-num">02</span>
+        <div class="include-body">
+          <h3>Una nueva forma de interpretar lo que está ocurriendo</h3>
+          <p>Más que respuestas, obtendrás un marco mental para analizar las conversaciones que marcarán los próximos años. La meta no es que adoptes mis conclusiones. La meta es que desarrolles mejores preguntas y más criterio para llegar a las tuyas.</p>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-num">03</span>
+        <div class="include-body">
+          <h3>Espacio de preguntas y respuestas en vivo</h3>
+          <p>Las mejores conversaciones suelen comenzar cuando termina la presentación. Tendrás la oportunidad de plantear preguntas, explorar ideas y profundizar en los temas que más llamen tu atención.</p>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-num">04</span>
+        <div class="include-body">
+          <h3>Acceso a la grabación completa</h3>
+          <p>La sesión quedará grabada para que puedas revisarla nuevamente a tu ritmo y regresar a los conceptos que quieras explorar con mayor profundidad.</p>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-num">05</span>
+        <div class="include-body">
+          <h3>Continuidad después de la clase</h3>
+          <p>Las mejores preguntas rara vez aparecen durante la conversación. Aparecen después. Cuando procesas una idea. Cuando conectas algo que antes no habías visto.</p>
+          <p>Por eso esta conversación no termina cuando se cierra la sesión de Zoom. Tendrás acceso a un espacio privado de seguimiento donde podremos continuar explorando preguntas, ideas y reflexiones que surjan después de la Clase Magistral.</p>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-num">06</span>
+        <div class="include-body">
+          <h3>Acceso prioritario a futuras conversaciones</h3>
+          <p>Esta es la primera edición de Café y Capital. Los participantes de esta edición tendrán prioridad para participar en futuras conversaciones, sesiones y espacios que se vayan construyendo a partir de esta comunidad.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="includes-recap">
+      <div class="event-info">
+        <div class="row"><span class="icon">📅</span><span>7 de julio</span></div>
+        <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+        <div class="row"><span class="icon">⏱</span><span>90 minutos</span></div>
+        <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
+        <div class="row price"><span class="icon">💵</span><span>$79 USD</span></div>
+      </div>
+      <p class="includes-recap-sub">Primera edición – Miembros fundadores<br>90 minutos en vivo + grabación completa + seguimiento posterior a la sesión</p>
+      <a href="https://buy.stripe.com/eVq6oGcecaEJfHnaHmbfO01" class="cta-btn">Quiero mi lugar — $79 USD</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Necesito saber de economía para asistir?</summary>
+        <p>No. La clase está diseñada para personas curiosas que quieren entender mejor lo que está ocurriendo, independientemente de su nivel de conocimiento previo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesito invertir o tener experiencia financiera?</summary>
+        <p>No. El objetivo es desarrollar contexto y criterio. No recibirás recomendaciones de inversión ni estrategias financieras específicas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Esto es una recomendación financiera?</summary>
+        <p>No. Café y Capital es un espacio educativo y de conversación. Cada persona es responsable de sus propias decisiones financieras.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo participar si vivo fuera de México?</summary>
+        <p>Sí. La conversación aborda cambios globales que te impactan sin importar tu ubicación geográfica.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿La sesión quedará grabada?</summary>
+        <p>Sí. Después de la clase recibirás acceso a la grabación de la Clase Magistral para que puedas revisarla nuevamente a tu ritmo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <p class="final-cta-line">El dinero nunca volverá a ser como antes.<br>La pregunta es si empezarás a entender por qué antes que la mayoría.</p>
+    <div class="event-info">
+      <div class="row"><span class="icon">📅</span><span>7 de julio</span></div>
+      <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+      <div class="row"><span class="icon">⏱</span><span>90 minutos</span></div>
+      <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
+      <div class="row price"><span class="icon">💵</span><span>$79 USD</span></div>
+    </div>
+    <a href="https://buy.stripe.com/eVq6oGcecaEJfHnaHmbfO01" class="cta-btn">Reservar mi lugar — $79 USD</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <img class="footer-logo-icon" src="logo/icon-mark.png" alt="Café y Capital">
+    <p class="footer-brand-name">CAFÉ Y CAPITAL</p>
+    <p class="footer-tagline">Conectando los puntos detrás del dinero</p>
+    <p class="footer-social-label">Síguenos en nuestras redes sociales</p>
+    <div class="footer-social-icons">
+      <a href="https://www.instagram.com/cafe.ycapital?igsh=MWtncjlranJxZWhuaQ==" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
       </a>
-      <a href="https://buy.stripe.com/7sYfZgfqoeUZeDjaHmbfO00" class="btn-nav" target="_blank" rel="noopener">Únete ahora →</a>
+      <a href="https://youtube.com/@cafe.ycapital?si=oxpX3ca3cL_BPsQO" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@cafe.ycapital?_r=1&_t=ZP-97P50bW6G0l" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1Cr6hChaKX/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
     </div>
-  </nav>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="badge">☕ Lanzamiento exclusivo &nbsp;·&nbsp; Plazas limitadas</div>
-        <h1>Aprende a invertir con<br><span class="g">claridad, estrategia</span><br>y comunidad real</h1>
-        <p class="hero-sub">Café y Capital es la membresía en español que te lleva de "no sé por dónde empezar" a invertir con confianza — con análisis semanales, estrategias probadas y una comunidad que camina contigo.</p>
-
-        <div class="cd-wrap">
-          <p class="cd-label">⏳ Precio de lanzamiento — cierra en:</p>
-          <div class="cd-row">
-            <div class="cd-box"><span class="cd-num" id="cd-d">00</span><span class="cd-unit">Días</span></div>
-            <span class="cd-sep">:</span>
-            <div class="cd-box"><span class="cd-num" id="cd-h">00</span><span class="cd-unit">Horas</span></div>
-            <span class="cd-sep">:</span>
-            <div class="cd-box"><span class="cd-num" id="cd-m">00</span><span class="cd-unit">Min</span></div>
-            <span class="cd-sep">:</span>
-            <div class="cd-box"><span class="cd-num" id="cd-s">00</span><span class="cd-unit">Seg</span></div>
-          </div>
-        </div>
-
-        <div class="hero-cta">
-          <a href="https://buy.stripe.com/7sYfZgfqoeUZeDjaHmbfO00" class="btn-hero" target="_blank" rel="noopener">Quiero unirme al precio especial →</a>
-          <p class="guarantee">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Pago 100% seguro vía Stripe &nbsp;·&nbsp; Sin compromisos ocultos
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- STATS -->
-    <div class="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat"><span class="stat-num">500+</span><span class="stat-txt">Miembros activos</span></div>
-          <div class="stat"><span class="stat-num">52</span><span class="stat-txt">Análisis al año</span></div>
-          <div class="stat"><span class="stat-num">100%</span><span class="stat-txt">En español</span></div>
-          <div class="stat"><span class="stat-num">4.9★</span><span class="stat-txt">Valoración media</span></div>
-        </div>
-      </div>
+    <div class="footer-links">
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Aviso de privacidad</a>
+      <a href="terminos.html">Términos y condiciones</a>
     </div>
+    <p class="footer-copy">© 2026 Café y Capital. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-    <!-- BENEFITS -->
-    <section class="section benefits">
-      <div class="container">
-        <p class="sec-tag">¿Qué incluye?</p>
-        <h2 class="sec-title">Todo lo que necesitas para<br>invertir sin complicaciones</h2>
-        <div class="grid4">
-          <div class="card">
-            <span class="card-icon">📊</span>
-            <h3>Análisis semanales</h3>
-            <p>Recibe cada semana un análisis claro del mercado: qué está pasando, por qué importa y qué puedes hacer al respecto.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">🎯</span>
-            <h3>Estrategias probadas</h3>
-            <p>Aprende las mismas estrategias de inversión que usan los profesionales, explicadas en lenguaje sencillo y directo.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">🤝</span>
-            <h3>Comunidad activa</h3>
-            <p>Conéctate con cientos de inversores hispanohablantes que comparten tus metas y tu idioma.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">📱</span>
-            <h3>Acceso desde cualquier lugar</h3>
-            <p>Todo el contenido disponible en tu teléfono, tablet o computadora. Aprende a tu ritmo, en tu horario.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">☕</span>
-            <h3>Conversaciones reales</h3>
-            <p>Nada de jerga inútil. Explicamos el mundo de las inversiones como si lo platicáramos frente a un café.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">🔔</span>
-            <h3>Alertas de oportunidad</h3>
-            <p>Recibe notificaciones cuando surjan oportunidades relevantes que vale la pena considerar.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">📚</span>
-            <h3>Biblioteca de recursos</h3>
-            <p>Acceso a guías, plantillas y materiales educativos para que puedas seguir aprendiendo a tu ritmo.</p>
-          </div>
-          <div class="card">
-            <span class="card-icon">🧠</span>
-            <h3>Mentoría grupal</h3>
-            <p>Sesiones mensuales en vivo para resolver dudas, analizar casos reales y crecer juntos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<script>
+function updateCountdown(){
+  var deadline = new Date("2026-07-05T23:59:00-06:00");
+  var now = new Date();
+  var diff = deadline - now;
+  if(diff < 0) diff = 0;
+  var days = Math.floor(diff / (1000*60*60*24));
+  var hours = Math.floor((diff / (1000*60*60)) % 24);
+  var mins = Math.floor((diff / (1000*60)) % 60);
+  document.getElementById('cd-days').textContent = days;
+  document.getElementById('cd-hours').textContent = hours;
+  document.getElementById('cd-mins').textContent = mins;
+}
+updateCountdown();
 
-    <!-- FOR WHO -->
-    <section class="section">
-      <div class="container">
-        <p class="sec-tag">¿Es para mí?</p>
-        <h2 class="sec-title">Café y Capital es para ti si…</h2>
-        <div class="who-grid">
-          <div class="who-item"><span class="who-check">✓</span><p>Quieres empezar a invertir pero no sabes por dónde ni con qué seguridad.</p></div>
-          <div class="who-item"><span class="who-check">✓</span><p>Ya inviertes pero sientes que no tienes una estrategia clara ni consistente.</p></div>
-          <div class="who-item"><span class="who-check">✓</span><p>Buscas análisis de calidad en español, sin anglicismos innecesarios.</p></div>
-          <div class="who-item"><span class="who-check">✓</span><p>Eres emprendedor y quieres que tu dinero trabaje para ti, no al revés.</p></div>
-          <div class="who-item"><span class="who-check">✓</span><p>Quieres pertenecer a una comunidad seria, comprometida y en tu idioma.</p></div>
-          <div class="who-item"><span class="who-check">✓</span><p>Buscas construir riqueza a largo plazo con disciplina y visión, no con atajos.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="section testimonials">
-      <div class="container center-text">
-        <p class="sec-tag">Lo dicen nuestros miembros</p>
-        <h2 class="sec-title">Resultados reales, personas reales</h2>
-        <div class="grid3">
-          <div class="tcard">
-            <div class="stars">★★★★★</div>
-            <blockquote>"Antes me daba miedo hasta abrir una cuenta de inversión. Ahora entiendo el mercado y tengo un portafolio armado que me da tranquilidad. Café y Capital cambió mi relación con el dinero."</blockquote>
-            <div class="author">
-              <div class="avatar">ML</div>
-              <div class="author-info"><strong>María L.</strong><small>Emprendedora, CDMX</small></div>
-            </div>
-          </div>
-          <div class="tcard">
-            <div class="stars">★★★★★</div>
-            <blockquote>"Llevaba años leyendo sobre inversiones en inglés y no entendía nada. Aquí todo se explica de forma clara, con ejemplos concretos y sin rodeos. Es exactamente lo que buscaba."</blockquote>
-            <div class="author">
-              <div class="avatar">RG</div>
-              <div class="author-info"><strong>Roberto G.</strong><small>Ingeniero, Guadalajara</small></div>
-            </div>
-          </div>
-          <div class="tcard">
-            <div class="stars">★★★★★</div>
-            <blockquote>"La comunidad vale el precio por sí sola. Aprender junto a personas que tienen metas similares a las tuyas es algo que no encuentras en ningún otro lado. 100% recomendable."</blockquote>
-            <div class="author">
-              <div class="avatar">SP</div>
-              <div class="author-info"><strong>Sandra P.</strong><small>Freelancer, Monterrey</small></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OFFER -->
-    <section class="section offer">
-      <div class="container center-text">
-        <p class="sec-tag">Oferta de lanzamiento</p>
-        <h2 class="sec-title">Únete hoy al precio especial</h2>
-        <p class="sec-sub" style="margin:0 auto 0">Esta oferta desaparece el 5 de julio a las 11:59 PM (hora CDMX). No habrá excepciones.</p>
-
-        <div class="offer-card">
-          <span class="offer-badge">Lanzamiento exclusivo</span>
-          <p class="offer-title">Membresía Café y Capital</p>
-          <p class="offer-sub">Acceso completo a todo el contenido y la comunidad</p>
-          <div class="offer-price"><sup>$</sup>XXX</div>
-          <p class="offer-period">pago único / mes (cancela cuando quieras)</p>
-
-          <ul class="offer-list">
-            <li><span class="chk">✓</span> Análisis semanales de mercado en español</li>
-            <li><span class="chk">✓</span> Acceso completo a la comunidad privada</li>
-            <li><span class="chk">✓</span> Biblioteca de recursos y plantillas</li>
-            <li><span class="chk">✓</span> Sesiones mensuales en vivo</li>
-            <li><span class="chk">✓</span> Alertas de oportunidades de inversión</li>
-            <li><span class="chk">✓</span> Soporte directo del equipo</li>
-          </ul>
-
-          <div class="cd-row" style="margin-bottom:28px">
-            <div class="cd-box"><span class="cd-num" id="cd-d2">00</span><span class="cd-unit">Días</span></div>
-            <span class="cd-sep">:</span>
-            <div class="cd-box"><span class="cd-num" id="cd-h2">00</span><span class="cd-unit">Horas</span></div>
-            <span class="cd-sep">:</span>
-            <div class="cd-box"><span class="cd-num" id="cd-m2">00</span><span class="cd-unit">Min</span></div>
-            <span class="cd-sep">:</span>
-            <div class="cd-box"><span class="cd-num" id="cd-s2">00</span><span class="cd-unit">Seg</span></div>
-          </div>
-
-          <a href="https://buy.stripe.com/7sYfZgfqoeUZeDjaHmbfO00" class="btn-offer" target="_blank" rel="noopener">Unirme ahora al precio especial →</a>
-          <p class="secure">🔒 Pago seguro · Procesado por Stripe · SSL</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section">
-      <div class="container center-text">
-        <p class="sec-tag">Preguntas frecuentes</p>
-        <h2 class="sec-title">Resolvemos tus dudas</h2>
-        <div class="faq-wrap">
-
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              ¿Necesito experiencia previa en inversiones?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body"><p>No. Café y Capital está diseñado para todos los niveles. Si eres principiante, te llevamos de la mano. Si ya tienes experiencia, encontrarás análisis profundos y estrategias avanzadas que complementarán lo que ya sabes.</p></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              ¿Cuándo tengo acceso al contenido?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body"><p>Inmediatamente después de completar tu pago recibirás un correo con tus credenciales de acceso. En menos de 5 minutos estarás dentro de la comunidad y con acceso a todos los materiales.</p></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              ¿Puedo cancelar cuando quiera?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body"><p>Sí. Si la membresía es mensual, puedes cancelar en cualquier momento desde tu panel sin penalizaciones. Tu acceso continuará hasta el final del periodo pagado.</p></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              ¿El contenido aplica para mi país?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body"><p>Sí. Cubrimos mercados globales y principios de inversión universales que aplican sin importar si estás en México, Colombia, Argentina, España u otro país de habla hispana. También incluimos perspectivas regionales.</p></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-btn" onclick="toggleFaq(this)">
-              ¿Tienen garantía de satisfacción?
-              <span class="faq-icon">+</span>
-            </button>
-            <div class="faq-body"><p>Estamos comprometidos con tu satisfacción. Si en los primeros 7 días sientes que el contenido no es para ti, contáctanos y buscamos una solución juntos. Queremos que tomes la decisión correcta.</p></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section style="padding:60px 0;background:var(--bg2);text-align:center;border-top:1px solid var(--border)">
-      <div class="container">
-        <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:12px">¿Listo para tomar el control de tus finanzas?</h2>
-        <p style="color:var(--muted);margin-bottom:32px;font-size:1rem">El precio de lanzamiento vence el 5 de julio. Después, todo sube.</p>
-        <a href="https://buy.stripe.com/7sYfZgfqoeUZeDjaHmbfO00" class="btn-hero" target="_blank" rel="noopener">Quiero empezar hoy →</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <a href="/" class="footer-logo">
-          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOTAgNjgiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsMTIpIj48cmVjdCB4PSIwIiB5PSIxNiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjM0IiByeD0iMyIgZmlsbD0iIzdCNEEyQSIvPjxyZWN0IHg9Ii0zIiB5PSIxMCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iIzlCNjA0MCIvPjxwYXRoIGQ9Ik01MCAyNCBRNjUgMjQgNjUgMzQgUTY1IDQ0IDUwIDQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3QjRBMkEiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTEyIDggUTE2IDIgMTIgLTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNSA4IFEyOSAyIDI1IC0yIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUEyMjciIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzggOCBRNDIgMiAzOCAtMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBMjI3IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNzYiIHk9IjQzIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyNyIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNDOUEyMjciPkNhZiYjMjMzOyA8dHNwYW4gZmlsbD0iI0ZGRkZGRiI+eTwvdHNwYW4+IENhcGl0YWw8L3RleHQ+PC9nPjwvc3ZnPgo=" alt="Café y Capital">
-        </a>
-        <p class="footer-tagline">Finanzas e inversiones inteligentes en español.</p>
-        <nav class="footer-links">
-          <a href="/privacidad.html">Privacidad</a>
-          <a href="/terminos.html">Términos</a>
-          <a href="/contacto.html">Contacto</a>
-        </nav>
-      </div>
-      <p class="footer-copy">© 2026 Café y Capital. Todos los derechos reservados. Las inversiones conllevan riesgos. El contenido es educativo y no constituye asesoría financiera.</p>
-    </div>
-  </footer>
-
-  <script>
-    const DEADLINE = new Date('2026-07-05T23:59:00-06:00');
-
-    function tick() {
-      const now = new Date();
-      const diff = DEADLINE - now;
-
-      if (diff <= 0) {
-        ['cd-d','cd-h','cd-m','cd-s','cd-d2','cd-h2','cd-m2','cd-s2'].forEach(id => {
-          const el = document.getElementById(id);
-          if (el) el.textContent = '00';
-        });
-        return;
-      }
-
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      const pad = n => String(n).padStart(2,'0');
-
-      [['cd-d',d],['cd-h',h],['cd-m',m],['cd-s',s],
-       ['cd-d2',d],['cd-h2',h],['cd-m2',m],['cd-s2',s]].forEach(([id,val]) => {
-        const el = document.getElementById(id);
-        if (el) el.textContent = pad(val);
+// Meta Pixel — InitiateCheckout en clic de cualquier CTA hacia Stripe
+document.querySelectorAll('a.cta-btn[href*="buy.stripe.com"]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'Café y Capital - Clase Magistral',
+        value: 79.00,
+        currency: 'USD'
       });
     }
+  });
+});
+</script>
 
-    tick();
-    setInterval(tick, 1000);
-
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    }
-  </script>
 </body>
 </html>

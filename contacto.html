@@ -4,244 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto — Café y Capital</title>
-  <meta name="description" content="¿Tienes dudas sobre la membresía Café y Capital? Escríbenos y te respondemos a la brevedad.">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="noindex">
   <style>
-    :root{--bg:#080D18;--bg2:#0D1526;--card:#111D35;--gold:#C9A227;--gold2:#E8C84A;--text:#E6EDF3;--muted:#8B949E;--border:rgba(201,162,39,.18);--r:12px}
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
-    a{color:var(--gold);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:960px;margin:0 auto;padding:0 24px}
-    .nav{position:sticky;top:0;z-index:999;background:rgba(8,13,24,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:12px 0}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .nav-logo img{height:40px;width:auto}
-    .nav-back{font-size:.85rem;color:var(--muted);transition:color .2s}
-    .nav-back:hover{color:var(--gold);text-decoration:none}
-    .main{padding:70px 0 90px}
-    .page-header{text-align:center;margin-bottom:56px}
-    .page-header h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;margin-bottom:12px;letter-spacing:-.3px}
-    .page-header p{color:var(--muted);font-size:1.02rem;max-width:500px;margin:0 auto;line-height:1.75}
-    .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:start}
-    /* Info cards */
-    .info-cards{display:flex;flex-direction:column;gap:16px}
-    .info-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px}
-    .info-card-icon{font-size:1.6rem;margin-bottom:12px;display:block}
-    .info-card h3{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:6px}
-    .info-card p,.info-card a{font-size:.88rem;color:var(--muted);line-height:1.6}
-    .info-card a{color:var(--gold)}
-    .info-card a:hover{text-decoration:underline}
-    .cta-box{background:linear-gradient(135deg,rgba(201,162,39,.12),rgba(201,162,39,.04));border:1px solid rgba(201,162,39,.3);border-radius:var(--r);padding:24px;margin-top:4px}
-    .cta-box p{font-size:.88rem;color:var(--muted);margin-bottom:14px;line-height:1.65}
-    .btn-stripe{display:block;text-align:center;padding:13px 20px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:800;font-size:.88rem;border-radius:50px;transition:transform .2s,box-shadow .2s}
-    .btn-stripe:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,162,39,.4);text-decoration:none}
-    /* Form */
-    .form-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:36px}
-    .form-card h2{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:6px}
-    .form-card .sub{font-size:.85rem;color:var(--muted);margin-bottom:28px}
-    .field{margin-bottom:20px}
-    .field label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.8px}
-    .field input,.field select,.field textarea{width:100%;background:#0A1020;border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-size:.9rem;font-family:inherit;transition:border-color .2s,box-shadow .2s;outline:none}
-    .field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(201,162,39,.5);box-shadow:0 0 0 3px rgba(201,162,39,.1)}
-    .field select{appearance:none;-webkit-appearance:none;cursor:pointer}
-    .field textarea{resize:vertical;min-height:130px;line-height:1.6}
-    .field input::placeholder,.field textarea::placeholder{color:#4A5568}
-    .field select option{background:#0D1526;color:var(--text)}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .btn-submit{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:900;font-size:.95rem;border:none;border-radius:50px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit;margin-top:8px}
-    .btn-submit:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(201,162,39,.45)}
-    .btn-submit:disabled{opacity:.6;cursor:not-allowed;transform:none}
-    .form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.5}
-    /* Success */
-    .success-msg{display:none;text-align:center;padding:40px 20px}
-    .success-msg .icon{font-size:3rem;margin-bottom:16px}
-    .success-msg h3{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px}
-    .success-msg p{color:var(--muted);font-size:.9rem}
-    /* Footer */
-    footer{background:#050810;border-top:1px solid var(--border);padding:32px 0;text-align:center}
-    .footer-links{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
-    .footer-links a{font-size:.82rem;color:var(--muted)}
-    .footer-links a:hover{color:var(--gold);text-decoration:none}
-    .footer-copy{font-size:.75rem;color:var(--muted);opacity:.5}
-    @media(max-width:768px){
-      .contact-grid{grid-template-columns:1fr}
-      .info-cards{order:2}
-      .form-card{order:1}
-      .form-row{grid-template-columns:1fr}
-      .main{padding:50px 0 70px}
-    }
-    @media(max-width:480px){
-      .form-card{padding:24px 20px}
-    }
-  </style>
+@font-face{
+  font-family:'DM Serif Display';
+  src:url('fonts/dm-serif-display-latin-400-normal.woff2') format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-400-normal.woff2') format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-500-normal.woff2') format('woff2');
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-600-normal.woff2') format('woff2');
+  font-weight:600; font-style:normal; font-display:swap;
+}
+:root{--bg:#F7F7F5;--section:#F2F2EF;--card:#ECEBE7;--text-1:#1F1F1C;--text-2:#666660;--border:#E4E3DE;--gold:#C4A04A;--gold-hover:#D0AE5B;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text-1);line-height:1.6;}
+.container{max-width:760px;margin:0 auto;padding:0 24px;}
+/* Header */
+.site-header{width:100%;background:var(--section);border-bottom:1px solid var(--border);padding:16px 24px;display:flex;align-items:center;}
+.header-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.header-logo img{width:42px;height:42px;object-fit:contain;}
+.header-logo-text{font-family:'DM Serif Display',Georgia,serif;font-size:18px;color:var(--text-1);white-space:nowrap;}
+/* Prose content */
+.page-main{padding:48px 0 64px;}
+.page-eyebrow{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.page-title{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:40px;line-height:1.15;color:var(--text-1);margin-bottom:8px;}
+.page-date{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--text-2);margin-bottom:40px;border-bottom:1px solid var(--border);padding-bottom:24px;}
+h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:24px;color:var(--text-1);margin:36px 0 12px;}
+h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:18px;color:var(--text-1);margin:24px 0 8px;}
+p{font-family:'Montserrat',sans-serif;font-size:16px;color:var(--text-2);line-height:1.75;margin-bottom:16px;}
+ul,ol{padding-left:20px;margin-bottom:16px;}
+li{font-family:'Montserrat',sans-serif;font-size:16px;color:var(--text-2);line-height:1.75;margin-bottom:6px;}
+strong{color:var(--text-1);font-weight:600;}
+a{color:var(--gold);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.highlight{background:var(--card);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0;}
+.highlight p{margin:0;}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-family:'Montserrat',sans-serif;font-size:14px;color:var(--text-2);text-decoration:none;margin-bottom:32px;}
+.back-link:hover{color:var(--gold);}
+/* Contact form */
+.form-group{margin-bottom:20px;}
+.form-label{display:block;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-1);margin-bottom:6px;letter-spacing:0.3px;}
+.form-input,.form-textarea{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;font-family:'Montserrat',sans-serif;font-size:15px;color:var(--text-1);outline:none;transition:border-color 200ms;}
+.form-input:focus,.form-textarea:focus{border-color:var(--gold);}
+.form-textarea{min-height:120px;resize:vertical;}
+.form-btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:56px;background:var(--gold);color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:15px;letter-spacing:0.5px;text-transform:uppercase;border:none;border-radius:999px;cursor:pointer;transition:background 200ms;}
+.form-btn:hover{background:var(--gold-hover);}
+.contact-info{background:var(--card);border-radius:16px;padding:28px;margin-bottom:32px;}
+.contact-info p{margin-bottom:8px;}
+.contact-info p:last-child{margin-bottom:0;}
+/* Footer */
+.site-footer{padding:56px 0 40px;text-align:center;background:var(--bg);border-top:1px solid var(--border);}
+.footer-logo-icon{width:80px;height:80px;display:block;margin:0 auto 14px;object-fit:contain;}
+.footer-brand-name{font-family:'DM Serif Display',Georgia,serif;font-size:28px;color:var(--text-1);margin-bottom:6px;}
+.footer-tagline{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--text-2);margin-bottom:28px;}
+.footer-social-label{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--text-2);margin-bottom:14px;}
+.footer-social-icons{display:flex;justify-content:center;gap:14px;margin-bottom:28px;}
+.footer-social-icons a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(196,160,74,0.4);border-radius:50%;color:var(--gold);text-decoration:none;}
+.footer-social-icons svg{width:18px;height:18px;}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:16px;}
+.footer-links a{font-family:'Montserrat',sans-serif;font-size:13px;color:var(--text-2);text-decoration:underline;}
+.footer-copy{font-family:'Montserrat',sans-serif;font-size:12px;color:var(--text-2);opacity:0.7;}
+</style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x9k7l4daan");
+  </script>
 </head>
 <body>
 
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="/" class="nav-logo">
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOTAgNjgiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUsMTIpIj48cmVjdCB4PSIwIiB5PSIxNiIgd2lkdGg9IjUwIiBoZWlnaHQ9IjM0IiByeD0iMyIgZmlsbD0iIzdCNEEyQSIvPjxyZWN0IHg9Ii0zIiB5PSIxMCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwIiByeD0iMiIgZmlsbD0iIzlCNjA0MCIvPjxwYXRoIGQ9Ik01MCAyNCBRNjUgMjQgNjUgMzQgUTY1IDQ0IDUwIDQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3QjRBMkEiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTEyIDggUTE2IDIgMTIgLTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTIyNyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0yNSA4IFEyOSAyIDI1IC0yIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUEyMjciIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzggOCBRNDIgMiAzOCAtMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBMjI3IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNzYiIHk9IjQzIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyNyIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNDOUEyMjciPkNhZiYjMjMzOyA8dHNwYW4gZmlsbD0iI0ZGRkZGRiI+eTwvdHNwYW4+IENhcGl0YWw8L3RleHQ+PC9nPjwvc3ZnPgo=" alt="Café y Capital">
+<header class="site-header">
+  <a href="index.html" class="header-logo">
+    <img src="logo/icon-mark.png" alt="Café y Capital">
+    <span class="header-logo-text">CAFÉ Y CAPITAL</span>
+  </a>
+</header>
+
+<main class="page-main">
+  <div class="container">
+    <a href="index.html" class="back-link">← Volver al inicio</a>
+    <p class="page-eyebrow">Contacto</p>
+    <h1 class="page-title">¿En qué podemos ayudarte?</h1>
+    <p class="page-date">Escríbenos con cualquier duda sobre la clase magistral, el contenido o los pagos. Respondemos en menos de 24 horas hábiles.</p>
+
+    <div class="contact-info">
+      <p><strong>📧 Correo directo</strong></p>
+      <p>Para asuntos urgentes escríbenos a <a href="mailto:hola@cafeycapital.com">hola@cafeycapital.com</a></p>
+      <p style="margin-top:16px"><strong>🌐 Sitio web</strong></p>
+      <p><a href="https://cafeycapital.com">cafeycapital.com</a></p>
+    </div>
+
+    <h2>Envíanos un mensaje</h2>
+    <p>Completa el formulario y te respondemos pronto.</p>
+
+    <form onsubmit="handleSubmit(event)" style="margin-top:24px;">
+      <div class="form-group">
+        <label class="form-label">Nombre *</label>
+        <input class="form-input" type="text" name="nombre" required placeholder="Tu nombre">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Correo electrónico *</label>
+        <input class="form-input" type="email" name="email" required placeholder="tu@correo.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">¿En qué podemos ayudarte?</label>
+        <textarea class="form-textarea" name="mensaje" placeholder="Escribe tu pregunta o comentario..."></textarea>
+      </div>
+      <button type="submit" class="form-btn">Enviar mensaje</button>
+    </form>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <img class="footer-logo-icon" src="logo/icon-mark.png" alt="Café y Capital">
+    <p class="footer-brand-name">CAFÉ Y CAPITAL</p>
+    <p class="footer-tagline">Conectando los puntos detrás del dinero</p>
+    <p class="footer-social-label">Síguenos en nuestras redes sociales</p>
+    <div class="footer-social-icons">
+      <a href="https://www.instagram.com/cafe.ycapital?igsh=MWtncjlranJxZWhuaQ==" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
       </a>
-      <a href="/" class="nav-back">← Volver al inicio</a>
+      <a href="https://youtube.com/@cafe.ycapital?si=oxpX3ca3cL_BPsQO" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@cafe.ycapital?_r=1&_t=ZP-97P50bW6G0l" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/share/1Cr6hChaKX/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
     </div>
-  </nav>
-
-  <main class="main">
-    <div class="container">
-      <div class="page-header">
-        <h1>¿En qué podemos ayudarte?</h1>
-        <p>Escríbenos con cualquier duda sobre la membresía, el contenido o los pagos. Respondemos en menos de 24 horas hábiles.</p>
-      </div>
-
-      <div class="contact-grid">
-
-        <!-- LEFT: Info -->
-        <div class="info-cards">
-
-          <div class="info-card">
-            <span class="info-card-icon">📧</span>
-            <h3>Correo directo</h3>
-            <p>Para asuntos urgentes escríbenos directo a:<br>
-              <a href="mailto:hola@cafeycapital.com">hola@cafeycapital.com</a>
-            </p>
-          </div>
-
-          <div class="info-card">
-            <span class="info-card-icon">⏱️</span>
-            <h3>Tiempo de respuesta</h3>
-            <p>Respondemos todos los mensajes en un plazo máximo de <strong style="color:var(--text)">24 horas hábiles</strong> (lunes a viernes).</p>
-          </div>
-
-          <div class="info-card">
-            <span class="info-card-icon">❓</span>
-            <h3>Preguntas frecuentes</h3>
-            <p>Muchas dudas las resolvemos directamente en nuestra <a href="/#faq">sección de FAQ</a> en el inicio.</p>
-          </div>
-
-          <div class="cta-box">
-            <p>¿Ya decidiste unirte? No necesitas esperar respuesta — puedes suscribirte ahora mismo de forma segura.</p>
-            <a href="https://buy.stripe.com/7sYfZgfqoeUZeDjaHmbfO00" class="btn-stripe" target="_blank" rel="noopener">
-              Unirme a Café y Capital →
-            </a>
-          </div>
-
-        </div>
-
-        <!-- RIGHT: Form -->
-        <div class="form-card">
-          <h2>Envíanos un mensaje</h2>
-          <p class="sub">Completa el formulario y te respondemos pronto.</p>
-
-          <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
-
-            <div class="form-row">
-              <div class="field">
-                <label for="nombre">Nombre *</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
-              </div>
-              <div class="field">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" autocomplete="family-name">
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="email">Correo electrónico *</label>
-              <input type="email" id="email" name="email" placeholder="tu@correo.com" required autocomplete="email">
-            </div>
-
-            <div class="field">
-              <label for="asunto">Asunto *</label>
-              <select id="asunto" name="asunto" required>
-                <option value="" disabled selected>Selecciona un tema</option>
-                <option value="membresia">Información sobre la membresía</option>
-                <option value="pago">Problemas con el pago</option>
-                <option value="acceso">Problemas de acceso</option>
-                <option value="cancelacion">Cancelación o cambios</option>
-                <option value="contenido">Pregunta sobre el contenido</option>
-                <option value="otro">Otro</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu duda o comentario con detalle..." required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit" id="submit-btn">
-              Enviar mensaje →
-            </button>
-            <p class="form-note">🔒 Tu información está protegida. No la compartimos con terceros.</p>
-
-          </form>
-
-          <div class="success-msg" id="success-msg">
-            <div class="icon">✅</div>
-            <h3>¡Mensaje recibido!</h3>
-            <p>Gracias por escribirnos. Te responderemos en menos de 24 horas hábiles al correo que nos proporcionaste.</p>
-          </div>
-
-        </div>
-      </div>
+    <div class="footer-links">
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Aviso de privacidad</a>
+      <a href="terminos.html">Términos y condiciones</a>
     </div>
-  </main>
+    <p class="footer-copy">© 2026 Café y Capital. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-  <footer>
-    <div class="container">
-      <nav class="footer-links">
-        <a href="/">Inicio</a>
-        <a href="/privacidad.html">Privacidad</a>
-        <a href="/terminos.html">Términos</a>
-        <a href="/contacto.html">Contacto</a>
-      </nav>
-      <p class="footer-copy">© 2026 Café y Capital. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const form = document.getElementById('contact-form');
-      const btn = document.getElementById('submit-btn');
-      const success = document.getElementById('success-msg');
-
-      const nombre = document.getElementById('nombre').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const asunto = document.getElementById('asunto').value;
-      const mensaje = document.getElementById('mensaje').value.trim();
-
-      if (!nombre || !email || !asunto || !mensaje) {
-        alert('Por favor completa todos los campos requeridos (*).');
-        return;
-      }
-
-      const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRe.test(email)) {
-        alert('Por favor ingresa un correo electrónico válido.');
-        return;
-      }
-
-      btn.disabled = true;
-      btn.textContent = 'Enviando…';
-
-      const mailtoBody = encodeURIComponent(
-        'Nombre: ' + document.getElementById('nombre').value + ' ' + document.getElementById('apellido').value + '\n' +
-        'Correo: ' + email + '\n' +
-        'Asunto: ' + asunto + '\n\n' +
-        'Mensaje:\n' + mensaje
-      );
-
-      window.location.href = 'mailto:hola@cafeycapital.com?subject=' +
-        encodeURIComponent('[Café y Capital] ' + asunto) +
-        '&body=' + mailtoBody;
-
-      setTimeout(() => {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }, 800);
-    }
-  </script>
-
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-btn');
+  btn.textContent = 'Mensaje enviado ✓';
+  btn.style.background = '#4a7c59';
+  setTimeout(() => { btn.textContent = 'Enviar mensaje'; btn.style.background = ''; }, 4000);
+}
+</script>
 </body>
 </html>
