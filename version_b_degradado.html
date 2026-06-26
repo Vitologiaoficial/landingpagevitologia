@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logo/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="logo/apple-touch-icon.png">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https:; frame-src https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com;">
+<title>Vitología | Patrones. Contexto. Claridad.</title>
+<meta name="description" content="Una conversación en vivo de 90 minutos para entender los cambios más importantes que están ocurriendo detrás del dinero. 14 de julio · 7 PM CDMX · En vivo por Zoom.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vitologia.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vitología">
+<meta property="og:title" content="Vitología | Patrones. Contexto. Claridad.">
+<meta property="og:description" content="Una conversación en vivo de 90 minutos para entender los cambios más importantes que están ocurriendo detrás del dinero. 14 de julio · 7 PM CDMX · En vivo por Zoom.">
+<meta property="og:url" content="https://vitologia.com/">
+<meta property="og:image" content="https://vitologia.com/logo/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_MX">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vitología | Patrones. Contexto. Claridad.">
+<meta name="twitter:description" content="Una conversación en vivo de 90 minutos para entender los cambios más importantes que están ocurriendo detrás del dinero. 14 de julio · 7 PM CDMX · En vivo por Zoom.">
+<meta name="twitter:image" content="https://vitologia.com/logo/og-image.jpg">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1536709284792590');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {
+  content_name: 'Vitología - Clase Magistral',
+  content_category: 'Evento educativo en vivo',
+  value: 79.00,
+  currency: 'MXN'
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1536709284792590&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<style>
+
+@font-face{
+  font-family:'DM Serif Display';
+  src:url('fonts/dm-serif-display-latin-400-normal.woff2') format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-400-normal.woff2') format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-500-normal.woff2') format('woff2');
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Montserrat';
+  src:url('fonts/montserrat-latin-600-normal.woff2') format('woff2');
+  font-weight:600; font-style:normal; font-display:swap;
+}
+
+:root{
+  --bg:#F7F7F5;
+  --section:#F2F2EF;
+  --card:#ECEBE7;
+  --text-1:#1F1F1C;
+  --text-2:#666660;
+  --border:#E4E3DE;
+  --gold:#C4A04A;
+  --gold-hover:#D0AE5B;
+}
+
+*{box-sizing:border-box; margin:0; padding:0;}
+
+html,body{
+  background:var(--bg);
+  color:var(--text-1);
+  font-family:'Montserrat',-apple-system,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+img,svg{display:block; max-width:100%;}
+
+/* ===== HEADER ===== */
+.site-header{
+  width:100%;
+  background:var(--section);
+  border-bottom:1px solid var(--border);
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:180px;
+}
+.logo img{ width:42px; height:42px; flex-shrink:0; object-fit:contain;}
+.logo-text{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:18px;
+  letter-spacing:0.5px;
+  color:var(--text-1);
+  line-height:1;
+  white-space:nowrap;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+/* ===== HERO ===== */
+.hero{
+  padding:48px 0 80px;
+}
+
+.eyebrow{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:8px;
+}
+
+.headline-wrap{
+  border-left:3px solid var(--gold);
+  padding-left:20px;
+  margin-bottom:14px;
+}
+
+.headline{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  font-size:40px;
+  line-height:1.08;
+  color:var(--text-1);
+  max-width:460px;
+}
+.headline .line{ display:block; }
+
+.hero-subtitle{
+  font-family:'Montserrat',sans-serif;
+  font-size:18px;
+  font-weight:400;
+  line-height:1.6;
+  color:var(--text-2);
+  max-width:560px;
+  margin-bottom:18px;
+  margin-top:0;
+}
+
+.copy{
+  max-width:560px;
+  margin-bottom:36px;
+}
+.copy p{
+  font-family:'Montserrat',sans-serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.7;
+  color:var(--text-2);
+  margin-bottom:18px;
+}
+.copy p.emphasis{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-style:italic;
+  font-size:21px;
+  line-height:1.4;
+  color:var(--text-1);
+  margin-bottom:6px;
+}
+.copy p.emphasis:last-child{ margin-bottom:18px; }
+
+/* ===== CTA ===== */
+.cta-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  width:auto;
+  max-width:360px;
+  min-height:72px;
+  padding:18px 32px;
+  background:var(--gold);
+  color:#FFFFFF;
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:16px;
+  line-height:1.3;
+  letter-spacing:0.5px;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:none;
+  border-radius:999px;
+  margin-left:auto;
+  margin-right:auto;
+  cursor:pointer;
+  transition:background 200ms ease, transform 200ms ease;
+  margin-bottom:28px;
+}
+.cta-btn:hover{ background:var(--gold-hover); transform:translateY(-2px); }
+
+/* ===== HERO DOOR IMAGE ===== */
+.hero-door{
+  width:100%;
+  margin:16px 0;
+  text-align:center;
+}
+.hero-door img{
+  width:100%;
+  max-height:70vh;
+  object-fit:contain;
+  border-radius:0;
+  display:block;
+}
+.hero-door figcaption{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  text-align:center;
+  margin-top:16px;
+}
+@media (min-width:768px){
+  .hero-door{ max-width:800px; width:70%; margin-left:auto; margin-right:auto; }
+}
+
+/* ===== EVENT INFO (tarjeta editorial) ===== */
+.event-info{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  background:var(--card);
+  border:1px solid rgba(196,160,74,0.35);
+  border-radius:16px;
+  padding:24px;
+  max-width:560px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:48px;
+}
+.event-info .row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:16px;
+  color:var(--text-2);
+}
+.event-info .row .icon{ font-size:16px; }
+.event-info .row.date{
+  font-weight:600;
+  color:var(--text-1);
+  font-size:17px;
+}
+.event-info .price{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  color:var(--text-1);
+  font-size:25px;
+  margin-top:4px;
+}
+
+/* ===== COUNTER ===== */
+.counter-block{
+  text-align:center;
+  padding-top:8px;
+}
+.counter-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  color:var(--text-2);
+  margin-bottom:20px;
+  line-height:1.5;
+}
+.counter-grid{
+  display:flex;
+  justify-content:center;
+  gap:32px;
+}
+.counter-item{ text-align:center; }
+.counter-num{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:28px;
+  color:var(--text-1);
+  line-height:1;
+  margin-bottom:6px;
+}
+.counter-unit{
+  font-family:'Montserrat',sans-serif;
+  font-weight:500;
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--text-2);
+}
+
+/* ===== VIDEO PLACEHOLDER (Hero) ===== */
+.video-placeholder{
+  width:100%;
+  background:var(--card);
+  border:1px solid var(--gold);
+  border-radius:16px;
+  padding:14px 20px;
+  margin-top:28px;
+  margin-bottom:24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.vp-label{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--text-2);
+  opacity:0.6;
+  margin-bottom:10px;
+}
+.vp-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  font-size:20px;
+  line-height:1.25;
+  color:var(--text-1);
+  max-width:380px;
+  margin-bottom:8px;
+}
+.vp-sub{
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  color:var(--text-2);
+  margin-bottom:2px;
+}
+.vp-duration{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  opacity:0.8;
+}
+@media (min-width:768px){
+  .video-placeholder{ padding:24px 32px; margin-top:48px; margin-bottom:32px; max-width:900px; width:85%; margin-left:auto; margin-right:auto; }
+  .vp-title{ font-size:26px; max-width:480px; }
+}
+
+/* ===== TABLET (768px) ===== */
+@media (min-width:768px){
+  .site-header{ padding:20px 48px; }
+  .logo{ width:200px; }
+  .logo-text{ font-size:20px; }
+  .container{ padding:0 48px; }
+  .hero{ padding:64px 0 96px; }
+  .headline{ font-size:66px; max-width:600px; }
+  .copy p{ font-size:19px; }
+  .copy p.emphasis{ font-size:23px; }
+  .copy{ max-width:600px; }
+  .event-info{ max-width:600px; padding:32px; }
+  .cta-btn{ width:auto; padding:14px 48px; }
+  .counter-grid{ gap:48px; }
+}
+
+/* ===== DESKTOP (1024px+) — two column hero ===== */
+@media (min-width:1024px){
+  .site-header{ padding:24px 64px; }
+  .logo{ width:220px; }
+  .logo-text{ font-size:22px; }
+  .container{ padding:0 64px; }
+  .hero{ padding:96px 0 0; }
+
+  .hero-row{
+    margin-bottom:80px;
+  }
+  .hero-content{ max-width:900px; margin:0 auto; }
+
+  .eyebrow{ font-size:16px; margin-bottom:24px; }
+  .headline-wrap{ padding-left:24px; margin-bottom:36px; }
+  .headline{ font-size:80px; line-height:1.08; max-width:700px; }
+  .copy{ max-width:640px; margin-bottom:40px; }
+  .copy p{ font-size:20px; }
+  .copy p.emphasis{ font-size:25px; }
+  .cta-btn{ width:auto; padding:14px 56px; margin-bottom:36px; }
+  .event-info{ margin-bottom:0; max-width:560px; }
+
+  .counter-block{ padding:48px 0 80px; border-top:1px solid var(--border); }
+}
+
+/* ===== SECTION 02 — ¿QUÉ ES EXACTAMENTE ESTO? ===== */
+.section-02{
+  padding:64px 0 80px;
+  border-top:1px solid var(--border);
+  background:var(--section);
+}
+.section-head{
+  max-width:680px;
+  margin:0 auto;
+  text-align:center;
+  margin-bottom:48px;
+}
+.section-head .section-copy,
+.section-head .section-list{
+  text-align:left;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.section-title{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-weight:400;
+  font-size:36px;
+  line-height:1.1;
+  color:var(--text-1);
+  margin-bottom:24px;
+}
+.section-copy p{
+  font-family:'Montserrat',sans-serif;
+  font-size:18px;
+  line-height:1.7;
+  color:var(--text-1);
+  margin-bottom:16px;
+}
+.section-list{ margin:24px 0; }
+.section-list p{
+  font-family:'Montserrat',sans-serif;
+  font-weight:400;
+  font-size:18px;
+  line-height:1.6;
+  color:var(--text-1);
+  margin-bottom:8px;
+}
+
+.pricing-card{
+  max-width:560px;
+  margin:0 auto;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:32px 24px;
+}
+.pc-meta-row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:24px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--border);
+}
+.pc-meta-row .row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  color:var(--text-2);
+}
+.pc-price{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:48px;
+  color:var(--text-1);
+  text-align:center;
+  margin-bottom:24px;
+}
+.pricing-card .cta-btn{ width:100%; margin-bottom:28px; }
+.pc-edition{
+  text-align:center;
+  margin-bottom:24px;
+}
+.pc-edition p{
+  font-family:'Montserrat',sans-serif;
+  font-size:14px;
+  line-height:1.7;
+  color:var(--text-2);
+}
+.pc-edition p:first-child{
+  font-weight:600;
+  color:var(--text-1);
+  margin-bottom:4px;
+}
+.pc-guarantee{
+  border-top:1px solid var(--border);
+  padding-top:20px;
+  text-align:center;
+}
+.pc-guarantee-title{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:14px;
+  color:var(--text-1);
+  margin-bottom:8px;
+}
+.pc-guarantee-text{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  line-height:1.6;
+  color:var(--text-2);
+}
+
+@media (min-width:768px){
+  .section-02{ padding:96px 0; }
+  .section-title{ font-size:42px; }
+  .section-copy p{ font-size:19px; }
+  .pricing-card{ padding:48px; }
+  .pc-price{ font-size:52px; }
+}
+
+@media (min-width:1024px){
+  .section-02{ padding:128px 0; }
+  .section-title{ font-size:52px; }
+  .section-head{ margin-bottom:64px; }
+  .pc-meta-row{ flex-direction:row; justify-content:center; flex-wrap:wrap; gap:24px; }
+}
+
+/* ===== SECTION 03 — ¿POR QUÉ SOLO 30 LUGARES? ===== */
+.section-30{
+  padding:64px 0;
+  text-align:center;
+}
+.section-30 .section-copy{ max-width:560px; margin:0 auto 32px; }
+.section-30-row{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:22px;
+  color:var(--text-1);
+}
+@media (min-width:768px){
+  .section-30{ padding:96px 0; }
+  .section-30-row{ flex-direction:row; justify-content:center; gap:16px; font-size:26px; }
+  .section-30-row span:not(:last-child)::after{ content:"·"; margin-left:16px; color:var(--gold); }
+}
+
+/* ===== SECTION 04 — ¿POR QUÉ ESTA CONVERSACIÓN IMPORTA AHORA? ===== */
+.section-why{
+  padding:64px 0;
+  background:var(--section);
+  border-top:1px solid var(--border);
+}
+.section-why .section-head{ margin-bottom:32px; }
+.pull-quote{
+  max-width:640px;
+  margin:40px auto;
+  padding-left:20px;
+  border-left:3px solid var(--gold);
+  font-family:'DM Serif Display',Georgia,serif;
+  font-style:italic;
+  font-size:24px;
+  line-height:1.4;
+  color:var(--text-1);
+}
+@media (min-width:768px){
+  .section-why{ padding:96px 0; }
+  .pull-quote{ font-size:28px; }
+}
+
+/* ===== SECTION 05 — TRANSFORMACIÓN ===== */
+.transformation{ padding:64px 0; }
+.transform-grid{
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  max-width:900px;
+  margin:0 auto;
+}
+.transform-col{
+  flex:1;
+  padding:28px 24px;
+  border-radius:16px;
+}
+.transform-col.before{ background:var(--section); }
+.transform-col.after{ background:var(--card); border:1px solid var(--gold); }
+.transform-label{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:13px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+.transform-col.before .transform-label{ color:var(--text-2); }
+.transform-col.after .transform-label{ color:var(--gold); }
+.transform-col ul{ list-style:none; }
+.transform-col li{
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:14px;
+  padding-left:22px;
+  position:relative;
+}
+.transform-col.before li{ color:var(--text-2); }
+.transform-col.before li::before{ content:"×"; position:absolute; left:0; color:var(--text-2); opacity:0.6; }
+.transform-col.after li{ color:var(--text-1); font-weight:500; }
+.transform-col.after li::before{ content:"✓"; position:absolute; left:0; color:var(--gold); }
+@media (min-width:768px){
+  .transformation{ padding:96px 0; }
+  .transform-grid{ flex-direction:row; }
+}
+
+/* ===== SECTION 06 — HISTORIA DE MARISOL ===== */
+.story{
+  padding:64px 0;
+  background:var(--section);
+  border-top:1px solid var(--border);
+}
+.story-layout{
+  display:flex;
+  flex-direction:column;
+  gap:40px;
+  max-width:1100px;
+  margin:0 auto;
+}
+.story-photo{
+  flex-shrink:0;
+  width:100%;
+}
+.story-photo img{
+  width:100%;
+  max-width:420px;
+  height:auto;
+  border-radius:12px;
+  display:block;
+  margin:0 auto;
+  filter:saturate(0.85) contrast(1.05) brightness(1.03);
+}
+.story-photo figcaption{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  text-align:center;
+  margin-top:12px;
+  letter-spacing:0.3px;
+  font-style:italic;
+}
+.story-inner{ }
+.story-inner p{
+  font-family:'Montserrat',sans-serif;
+  font-size:17px;
+  line-height:1.75;
+  color:var(--text-2);
+  margin-bottom:18px;
+}
+.story-inner p strong{ color:var(--text-1); font-weight:600; }
+.story-quote{
+  margin:32px 0;
+  padding:24px 28px;
+  background:var(--card);
+  border-left:3px solid var(--gold);
+  border-radius:0 12px 12px 0;
+}
+.story-quote p{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-style:italic;
+  font-size:19px;
+  line-height:1.5;
+  color:var(--text-1);
+  margin:0;
+}
+@media (min-width:768px){
+  .story{ padding:96px 0; }
+  .story-layout{
+    flex-direction:row;
+    align-items:flex-start;
+    gap:64px;
+  }
+  .story-photo{
+    width:42%;
+    position:sticky;
+    top:32px;
+  }
+  .story-photo img{
+    max-width:100%;
+    margin:0;
+  }
+  .story-inner{
+    flex:1;
+  }
+  .story-inner p{ font-size:18px; }
+}
+
+/* ===== SECTION 07 — QUÉ INCLUYE ===== */
+.includes{ padding:64px 0; }
+.includes-list{ max-width:700px; margin:0 auto; }
+.include-item{
+  display:flex;
+  gap:20px;
+  padding:21px 0;
+  border-bottom:1px solid var(--border);
+}
+.include-item:first-child{ padding-top:0; }
+.include-num{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:22px;
+  color:var(--gold);
+  flex-shrink:0;
+  width:36px;
+}
+.include-body h3{
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:16px;
+  letter-spacing:0.3px;
+  color:var(--text-1);
+  margin-bottom:8px;
+}
+.include-body p{
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  color:var(--text-2);
+  margin-bottom:6px;
+}
+.includes-recap{
+  max-width:560px;
+  margin:48px auto 0;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:32px 24px;
+  text-align:center;
+}
+.includes-recap .event-info{ margin:0 auto 24px; max-width:300px; }
+.includes-recap .cta-btn{ width:100%; }
+.includes-recap-sub{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  margin-bottom:20px;
+}
+@media (min-width:768px){
+  .includes{ padding:96px 0; }
+  .includes-recap{ padding:40px; }
+}
+
+/* ===== SECTION 08 — FAQ ===== */
+.faq{
+  padding:64px 0;
+  background:var(--section);
+  border-top:1px solid var(--border);
+}
+.faq-list{ max-width:680px; margin:0 auto; }
+.faq-item{
+  border-bottom:1px solid var(--border);
+}
+.faq-item summary{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  padding:22px 0;
+  font-family:'Montserrat',sans-serif;
+  font-weight:600;
+  font-size:16px;
+  color:var(--text-1);
+  cursor:pointer;
+  list-style:none;
+}
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary::after{
+  content:"+";
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:22px;
+  color:var(--gold);
+  flex-shrink:0;
+  transition:transform 200ms ease;
+}
+.faq-item[open] summary::after{ content:"–"; }
+.faq-item p{
+  font-family:'Montserrat',sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  color:var(--text-2);
+  padding-bottom:22px;
+  max-width:600px;
+}
+@media (min-width:768px){
+  .faq{ padding:96px 0; }
+}
+
+/* ===== SECTION 09 — CTA FINAL (única sección oscura) ===== */
+.final-cta{
+  padding:80px 0;
+  background:linear-gradient(to bottom, #F7F7F5 0%, #20231C 8%, #20231C 92%, #F7F7F5 100%);
+  text-align:center;
+}
+.final-cta-line{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:26px;
+  line-height:1.4;
+  color:#F5F5F2;
+  max-width:560px;
+  margin:0 auto 36px;
+}
+.final-cta .event-info{ max-width:340px; margin:0 auto 32px; background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.15); }
+.final-cta .event-info .row{ color:#D6D4CE; }
+.final-cta .event-info .row.date{ color:#F5F5F2; }
+.final-cta .event-info .price{ color:#C4A04A; font-weight:600; }
+.final-cta .counter-block{ border-top:1px solid rgba(255,255,255,0.1); padding-top:32px; }
+.final-cta .counter-label{ color:#D6D4CE; font-size:13px; letter-spacing:0.5px; }
+.final-cta .counter-num{ color:#F5F5F2; }
+.final-cta .counter-unit{ color:#D6D4CE; opacity:0.7; }
+.final-cta .cta-btn{ display:inline-flex; }
+@media (min-width:768px){
+  .final-cta{ padding:100px 0; }
+  .final-cta-line{ font-size:32px; }
+}
+
+/* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
+.site-footer{
+  padding:72px 0 56px;
+  text-align:center;
+  background:var(--bg);
+  border-top:1px solid var(--border);
+}
+.footer-logo-icon{
+  width:80px;
+  height:80px;
+  display:block;
+  margin:0 auto 20px;
+}
+.footer-brand-name{
+  font-family:'DM Serif Display',Georgia,serif;
+  font-size:28px;
+  color:var(--text-1);
+  letter-spacing:0.5px;
+  margin-bottom:8px;
+}
+.footer-tagline{
+  font-family:'Montserrat',sans-serif;
+  font-size:13px;
+  color:var(--text-2);
+  letter-spacing:1px;
+  margin-bottom:40px;
+}
+.footer-social-label{
+  font-family:'Montserrat',sans-serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--text-2);
+  margin-bottom:16px;
+}
+.footer-social-icons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-bottom:40px;
+}
+.footer-social-icons a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(196,160,74,0.4);
+  border-radius:50%;
+  color:var(--gold);
+  text-decoration:none;
+  transition:background 200ms ease, border-color 200ms ease;
+}
+.footer-social-icons a:hover{
+  background:rgba(196,160,74,0.12);
+  border-color:var(--gold);
+}
+.footer-social-icons svg{ width:18px; height:18px; }
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+.footer-links a{
+  font-family:'Montserrat',sans-serif;
+  font-size:12px;
+  letter-spacing:0.3px;
+  color:var(--text-2);
+  text-decoration:none;
+  border-bottom:1px solid rgba(102,102,96,0.3);
+  padding-bottom:1px;
+}
+.footer-copy{
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;
+  color:var(--text-2);
+  opacity:0.6;
+  letter-spacing:0.3px;
+}
+.footer-copy a{ color:inherit; }
+</style>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x9k7l4daan");
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">
+    <img src="logo/icon-mark.png" alt="Vitología">
+    <span class="logo-text">VITOLOGÍA</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="hero-row">
+      <div class="hero-content">
+
+        <p class="eyebrow">Patrones. Contexto. Claridad.</p>
+
+        <div class="headline-wrap">
+          <h1 class="headline">
+            <span class="line">El mundo está cambiando más rápido de lo que podemos procesarlo.</span>
+          </h1>
+        </div>
+
+        <p class="hero-subtitle">Una conversación para desarrollar un marco mental y entender los cambios que están transformando nuestro mundo.</p>
+
+        <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO MI LUGAR</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
+
+        <div class="video-embed" style="margin-top:20px;margin-bottom:16px;width:100%;max-width:400px;margin-left:auto;margin-right:auto;">
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#666660;margin-bottom:12px;text-align:center;">Toda transformación comienza con una pregunta.</p>
+          <div style="position:relative;padding-bottom:177.77%;height:0;overflow:hidden;border-radius:16px;">
+            <iframe src="https://www.youtube.com/embed/vfsgyqv7CkY" title="¿Por qué existe Vitología?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;"></iframe>
+          </div>
+        </div>
+
+        <figure class="hero-door">
+          <img src="logo/puerta-oficial-optimized.jpg" alt="Una puerta entreabierta con el logotipo de Vitología">
+          <figcaption>Algunas preguntas terminan abriendo puertas inesperadas.</figcaption>
+        </figure>
+
+        <div class="event-info">
+          <div class="row date"><span class="icon">📅</span><span>14 de julio</span></div>
+          <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+          <div class="row"><span class="icon">⏱</span><span>90 minutos</span></div>
+          <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
+          <div class="row price"><span class="icon">💵</span><span>$1,790 MXN</span></div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+</section>
+
+<section class="section-02">
+  <div class="container">
+
+    <div class="section-head">
+      <h2 class="section-title">¿Qué obtendrás en nuestra conversación?</h2>
+      <div class="section-copy">
+        <p>Durante 90 minutos exploraremos algunos de los cambios más importantes que están transformando el sistema financiero mundial. Conectarás eventos que normalmente parecen aislados para entender el contexto detrás de ellos, identificar el cambio estructural que los conecta y comprender cómo afectará esto a nuestro país y a nuestras decisiones durante los próximos años.</p>
+      </div>
+      <div class="section-list">
+        <p><strong style="color:var(--gold);">Esto NO es</strong></p>
+        <p>• Un curso de economía.</p>
+        <p>• Una clase para aprender a invertir.</p>
+        <p>• Una recomendación financiera.</p>
+      </div>
+      <div class="section-copy">
+        <p><strong style="color:var(--gold);">Esto SÍ es</strong></p>
+        <p>• Un marco mental para interpretar los cambios que están transformando nuestro mundo.</p>
+        <p>• Una conversación para conectar los puntos detrás de estos grandes cambios.</p>
+        <p>• Una oportunidad para desarrollar criterio antes de que los cambios resulten evidentes para la mayoría.</p>
+      </div>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pc-meta-row">
+        <div class="row"><span class="icon">📅</span><span>14 de julio</span></div>
+        <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+        <div class="row"><span class="icon">⏱</span><span>90 min</span></div>
+        <div class="row"><span class="icon">💻</span><span>Zoom</span></div>
+      </div>
+
+      <div class="pc-price">$1,790 MXN</div>
+
+      <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO MI LUGAR</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
+
+      <div class="pc-edition">
+        <p>Primera Edición · Miembros Fundadores</p>
+        <p>Solo 30 lugares disponibles</p>
+        <p>Precio de lanzamiento: $1,790 MXN</p>
+        <p>Inscripciones abiertas hasta el 12 de julio · 11:59 PM (CDMX)</p>
+      </div>
+
+      <div class="pc-guarantee">
+        <p class="pc-guarantee-title">✅ Garantía 100%</p>
+        <p class="pc-guarantee-text">Si al terminar la sesión consideras que no aportó valor a tu forma de entender lo que está ocurriendo, te devolvemos íntegramente tu dinero.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="story">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">¿Quién está detrás de Vitología?</h2>
+    </div>
+    <div class="story-layout">
+
+      <figure class="story-photo">
+        <img src="logo/marisol-biblioteca.jpg" alt="Marisol investigando en la biblioteca, libreta en mano">
+        <figcaption>Marisol investigando en la biblioteca donde nació Vitología.</figcaption>
+      </figure>
+
+      <div class="story-inner">
+        <p>De niña recuerdo ver anuncios por todas partes que decían:</p>
+        <p><strong>"Compro acciones TELMEX."</strong></p>
+        <p>Siempre tuve curiosidad por entender qué eran las acciones y por qué parecían tan importantes para algunas personas.</p>
+        <p>Le pregunté a mi mamá.</p>
+        <p>Le pregunté a otros adultos.</p>
+        <p>Nadie supo explicármelo.</p>
+        <p>Años después estudié Administración Financiera.</p>
+        <p>Aprendí cómo funcionan los mercados, las acciones y otros muchos conceptos técnicos.</p>
+        <p>Pero seguía haciéndome la misma pregunta:</p>
+        <p><strong>¿Por dónde empiezo?</strong></p>
+        <p>Tiempo después, embarazada, viviendo en otro país y preocupada por mi futuro financiero, decidí buscar ayuda.</p>
+        <p>Agendé una llamada con una empresa de educación financiera.</p>
+        <p>Días después recibí un correo.</p>
+        <p><strong>La llamada fue cancelada.</strong></p>
+
+        <div class="story-quote">
+          <p>"No creemos ser las personas adecuadas para ayudarte en este momento."</p>
+        </div>
+
+        <p>Ese día entendí que, si quería respuestas, probablemente tendría que encontrarlas por mi cuenta.</p>
+        <p>Con el tiempo descubrí algo que terminó cambiando por completo mi forma de entender el dinero.</p>
+        <p>Muchas veces el problema no es la falta de información.</p>
+        <p>La información está ahí.</p>
+        <p>Pero está fragmentada, sesgada y, sobre todo, desprovista de contexto.</p>
+        <p>Nos enseñan respuestas para preguntas que el mundo ya dejó atrás.</p>
+        <p>Mientras todos siguen hablando de acciones, los cambios más importantes ya están ocurriendo en otro lugar.</p>
+        <p>Entonces comprendí que aquello no era únicamente un problema del dinero.</p>
+        <p>Era un patrón.</p>
+        <p>Vivimos en un mundo que cambia más rápido de lo que aprendemos a interpretarlo.</p>
+        <p>Vitología nació de esa búsqueda.</p>
+        <p>No para seguir noticias.</p>
+        <p>No para reaccionar cuando todos ya están hablando de un tema.</p>
+        <p>Sino para desarrollar un marco mental que nos permita interpretar los cambios mientras todavía están ocurriendo.</p>
+        <p>Porque las personas siguen intentando responder las preguntas de ayer, mientras el mundo ya cambió de examen.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-why">
+  <div class="container">
+
+    <div class="section-head" style="margin-bottom:16px;">
+      <h2 class="section-title">¿Qué está cambiando realmente?</h2>
+    </div>
+
+    <figure style="margin:0 0 24px;width:100%;max-width:900px;margin-left:auto;margin-right:auto;">
+      <img src="logo/telefono-comparativa.jpg" alt="Antes: teléfono fijo. Ahora: smartphone." style="width:100%;display:block;border-radius:12px;">
+    </figure>
+
+    <div class="section-head" style="margin-bottom:24px;">
+      <div class="section-copy">
+        <p>Piensa en la última vez que usaste un teléfono fijo.</p>
+        <p>Probablemente ni siquiera lo recuerdes.</p>
+        <p>No desapareció de un día para otro.</p>
+        <p>Simplemente dejó de ser la mejor forma de comunicarnos.</p>
+        <p>Hoy usamos el teléfono prácticamente las 24 horas del día.</p>
+        <p>Pero nadie quiere volver a hacer una llamada desde un teléfono fijo.</p>
+        <p>Eso mismo está ocurriendo con el dinero.</p>
+        <p>No necesitas adivinar el futuro.</p>
+        <p>Necesitas aprender a reconocer los cambios mientras todavía están ocurriendo.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:8px;">
+      <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO ENTENDER ESTE CAMBIO</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
+    </div>
+
+  </div>
+</section>
+
+<section class="transformation">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Una nueva forma de interpretar el mundo</h2>
+    </div>
+    <div class="transform-grid">
+      <div class="transform-col before">
+        <p class="transform-label">Antes de Vitología</p>
+        <ul>
+          <li>Ves eventos aislados.</li>
+          <li>Reaccionas a los titulares.</li>
+          <li>Intentas entender cada noticia por separado.</li>
+        </ul>
+      </div>
+      <div class="transform-col after">
+        <p class="transform-label">Después de Vitología</p>
+        <ul>
+          <li>Identificas patrones.</li>
+          <li>Comprendes el contexto.</li>
+          <li>Interpretas los cambios con mayor claridad.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-30">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:32px;">
+      <h2 class="section-title">¿Por qué una conversación pequeña?</h2>
+      <div class="section-copy">
+        <p>Porque esto no es un webinar masivo.</p>
+        <p>Prefiero una conversación donde las preguntas importen, las ideas puedan explorarse con calma y cada persona tenga espacio para participar.</p>
+      </div>
+      <div class="section-closing-trio" style="margin-top:32px;text-align:center;">
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--text-1);line-height:1.4;margin-bottom:14px;">30 personas.</p>
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--text-1);line-height:1.4;margin-bottom:14px;">Una sala.</p>
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--text-1);line-height:1.4;margin-bottom:0;">Una conversación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="includes">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">¿Qué sucede cuando reservas tu lugar?</h2>
+    </div>
+
+    <figure style="margin:0 0 40px;width:100%;max-width:900px;margin-left:auto;margin-right:auto;">
+      <img src="logo/incluye-cards.jpg" alt="¿Qué sucede cuando reservas tu lugar? Acceso a la conversación en vivo, espacio de preguntas, grabación, materiales y comunidad privada." style="width:100%;display:block;border-radius:12px;">
+    </figure>
+
+    <div class="includes-recap">
+      <div class="event-info">
+        <div class="row"><span class="icon">📅</span><span>14 de julio</span></div>
+        <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+        <div class="row"><span class="icon">⏱</span><span>90 minutos</span></div>
+        <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
+        <div class="row price"><span class="icon">💵</span><span>$1,790 MXN</span></div>
+      </div>
+      <p class="includes-recap-sub">Primera edición – Miembros fundadores<br>90 minutos en vivo + grabación completa + seguimiento posterior a la sesión</p>
+      <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO MI LUGAR</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Necesito saber de economía para asistir?</summary>
+        <p>No. La conversación está diseñada para personas curiosas que quieren entender mejor lo que está ocurriendo, independientemente de su nivel de conocimiento previo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesito invertir o tener experiencia financiera?</summary>
+        <p>No. El objetivo es desarrollar contexto y criterio. No recibirás recomendaciones de inversión ni estrategias financieras específicas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Esto es una recomendación financiera?</summary>
+        <p>No. Vitología es un espacio educativo y de conversación. Cada persona es responsable de sus propias decisiones financieras.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo participar si vivo fuera de México?</summary>
+        <p>Sí. La conversación aborda cambios globales que te impactan sin importar tu ubicación geográfica.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿La sesión quedará grabada?</summary>
+        <p>Sí. Recibirás acceso a la grabación para verla nuevamente a tu ritmo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <p class="final-cta-line">El mundo seguirá cambiando.<br>La única pregunta es si tú cambiarás con él.</p>
+    <div class="event-info">
+      <div class="row"><span class="icon">📅</span><span>14 de julio</span></div>
+      <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
+      <div class="row"><span class="icon">⏱</span><span>90 minutos</span></div>
+      <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
+      <div class="row price"><span class="icon">💵</span><span>$1,790 MXN</span></div>
+    </div>
+    <a href="https://mpago.la/1NtHJPo" class="cta-btn">QUIERO MI LUGAR</a>
+    <div class="counter-block" style="margin-top:40px;">
+      <p class="counter-label">Las inscripciones cierran en:</p>
+      <div class="counter-grid" id="counter">
+        <div class="counter-item"><div class="counter-num" id="cd-days">—</div><div class="counter-unit">días</div></div>
+        <div class="counter-item"><div class="counter-num" id="cd-hours">—</div><div class="counter-unit">horas</div></div>
+        <div class="counter-item"><div class="counter-num" id="cd-mins">—</div><div class="counter-unit">minutos</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <img class="footer-logo-icon" src="logo/icon-mark.png" alt="Vitología">
+    <p class="footer-brand-name">VITOLOGÍA</p>
+    <p class="footer-tagline">Patrones. Contexto. Claridad.</p>
+    <div class="footer-social-icons">
+      <a href="https://www.instagram.com/vitologiaoficial?igsh=MTVubmJ3aTZoc3RtNA==" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://youtube.com/@vitologiaoficial?si=YPeCAP1COE00rO1n" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@vitologiaoficial?_r=1&_t=ZP-97SCB1UP9gM" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/vitologiaoficial" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+    </div>
+    <div class="footer-links">
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Aviso de privacidad</a>
+      <a href="terminos.html">Términos y condiciones</a>
+    </div>
+    <p class="footer-copy">© 2026 Vitología. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+function updateCountdown(){
+  var deadline = new Date("2026-07-12T23:59:00-06:00");
+  var now = new Date();
+  var diff = deadline - now;
+  if(diff < 0) diff = 0;
+  var days = Math.floor(diff / (1000*60*60*24));
+  var hours = Math.floor((diff / (1000*60*60)) % 24);
+  var mins = Math.floor((diff / (1000*60)) % 60);
+  document.getElementById('cd-days').textContent = days;
+  document.getElementById('cd-hours').textContent = hours;
+  document.getElementById('cd-mins').textContent = mins;
+}
+updateCountdown();
+
+// Meta Pixel — InitiateCheckout en clic de cualquier CTA hacia Stripe
+document.querySelectorAll('a.cta-btn[href*="mpago.la"]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    if (typeof fbq === 'function') {
+      fbq('track', 'InitiateCheckout', {
+        content_name: 'Vitología - Clase Magistral',
+        value: 79.00,
+        currency: 'MXN'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
