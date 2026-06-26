@@ -38,7 +38,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1536709284792590');
+fbq('init', '1013125207925099');
 fbq('track', 'PageView');
 fbq('track', 'ViewContent', {
   content_name: 'Vitología - Clase Magistral',
@@ -48,7 +48,7 @@ fbq('track', 'ViewContent', {
 });
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1536709284792590&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1013125207925099&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <style>
@@ -141,24 +141,35 @@ img,svg{display:block; max-width:100%;}
   letter-spacing:2px;
   text-transform:uppercase;
   color:var(--gold);
-  margin-bottom:20px;
+  margin-bottom:8px;
 }
 
 .headline-wrap{
   border-left:3px solid var(--gold);
   padding-left:20px;
-  margin-bottom:32px;
+  margin-bottom:14px;
 }
 
 .headline{
   font-family:'DM Serif Display',Georgia,serif;
   font-weight:400;
-  font-size:56px;
+  font-size:40px;
   line-height:1.08;
   color:var(--text-1);
-  max-width:560px;
+  max-width:460px;
 }
 .headline .line{ display:block; }
+
+.hero-subtitle{
+  font-family:'Montserrat',sans-serif;
+  font-size:18px;
+  font-weight:400;
+  line-height:1.6;
+  color:var(--text-2);
+  max-width:560px;
+  margin-bottom:18px;
+  margin-top:0;
+}
 
 .copy{
   max-width:560px;
@@ -185,12 +196,14 @@ img,svg{display:block; max-width:100%;}
 /* ===== CTA ===== */
 .cta-btn{
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
-  width:100%;
-  min-height:64px;
-  padding:14px 28px;
+  width:auto;
+  max-width:360px;
+  min-height:72px;
+  padding:18px 32px;
   background:var(--gold);
   color:#FFFFFF;
   font-family:'Montserrat',sans-serif;
@@ -202,6 +215,8 @@ img,svg{display:block; max-width:100%;}
   text-decoration:none;
   border:none;
   border-radius:999px;
+  margin-left:auto;
+  margin-right:auto;
   cursor:pointer;
   transition:background 200ms ease, transform 200ms ease;
   margin-bottom:28px;
@@ -211,11 +226,13 @@ img,svg{display:block; max-width:100%;}
 /* ===== HERO DOOR IMAGE ===== */
 .hero-door{
   width:100%;
-  margin:80px 0;
+  margin:16px 0;
   text-align:center;
 }
 .hero-door img{
   width:100%;
+  max-height:70vh;
+  object-fit:contain;
   border-radius:0;
   display:block;
 }
@@ -240,6 +257,8 @@ img,svg{display:block; max-width:100%;}
   border-radius:16px;
   padding:24px;
   max-width:560px;
+  margin-left:auto;
+  margin-right:auto;
   margin-bottom:48px;
 }
 .event-info .row{
@@ -403,6 +422,13 @@ img,svg{display:block; max-width:100%;}
   text-align:center;
   margin-bottom:48px;
 }
+.section-head .section-copy,
+.section-head .section-list{
+  text-align:left;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
 .section-title{
   font-family:'DM Serif Display',Georgia,serif;
   font-weight:400;
@@ -415,13 +441,13 @@ img,svg{display:block; max-width:100%;}
   font-family:'Montserrat',sans-serif;
   font-size:18px;
   line-height:1.7;
-  color:var(--text-2);
+  color:var(--text-1);
   margin-bottom:16px;
 }
 .section-list{ margin:24px 0; }
 .section-list p{
   font-family:'Montserrat',sans-serif;
-  font-weight:500;
+  font-weight:400;
   font-size:18px;
   line-height:1.6;
   color:var(--text-1);
@@ -683,7 +709,7 @@ img,svg{display:block; max-width:100%;}
 .include-item{
   display:flex;
   gap:20px;
-  padding:28px 0;
+  padding:21px 0;
   border-bottom:1px solid var(--border);
 }
 .include-item:first-child{ padding-top:0; }
@@ -779,7 +805,7 @@ img,svg{display:block; max-width:100%;}
 /* ===== SECTION 09 — CTA FINAL (única sección oscura) ===== */
 .final-cta{
   padding:72px 0;
-  background:#232110;
+  background:#1E1E1C;
   text-align:center;
 }
 .final-cta-line{
@@ -790,10 +816,14 @@ img,svg{display:block; max-width:100%;}
   max-width:560px;
   margin:0 auto 36px;
 }
-.final-cta .event-info{ max-width:340px; margin:0 auto 32px; background:transparent; border-color:rgba(255,255,255,0.2); }
+.final-cta .event-info{ max-width:340px; margin:0 auto 32px; background:rgba(255,255,255,0.07); border-color:rgba(255,255,255,0.15); }
 .final-cta .event-info .row{ color:#D6D4CE; }
 .final-cta .event-info .row.date{ color:#F5F5F2; }
-.final-cta .event-info .price{ color:#C4A04A; }
+.final-cta .event-info .price{ color:#C4A04A; font-weight:600; }
+.final-cta .counter-block{ border-top:1px solid rgba(255,255,255,0.1); padding-top:32px; }
+.final-cta .counter-label{ color:#D6D4CE; font-size:13px; letter-spacing:0.5px; }
+.final-cta .counter-num{ color:#F5F5F2; }
+.final-cta .counter-unit{ color:#D6D4CE; opacity:0.7; }
 .final-cta .cta-btn{ display:inline-flex; }
 @media (min-width:768px){
   .final-cta{ padding:100px 0; }
@@ -803,7 +833,7 @@ img,svg{display:block; max-width:100%;}
 /* ===== FOOTER ===== */
 /* ===== FOOTER ===== */
 .site-footer{
-  padding:56px 0 40px;
+  padding:72px 0 56px;
   text-align:center;
   background:var(--bg);
   border-top:1px solid var(--border);
@@ -812,34 +842,36 @@ img,svg{display:block; max-width:100%;}
   width:80px;
   height:80px;
   display:block;
-  margin:0 auto 14px;
+  margin:0 auto 20px;
 }
 .footer-brand-name{
   font-family:'DM Serif Display',Georgia,serif;
   font-size:28px;
   color:var(--text-1);
   letter-spacing:0.5px;
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 .footer-tagline{
   font-family:'Montserrat',sans-serif;
   font-size:13px;
   color:var(--text-2);
-  margin-bottom:28px;
+  letter-spacing:1px;
+  margin-bottom:40px;
 }
 .footer-social-label{
   font-family:'Montserrat',sans-serif;
-  font-size:13px;
+  font-size:12px;
   font-weight:600;
-  letter-spacing:0.3px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
   color:var(--text-2);
-  margin-bottom:14px;
+  margin-bottom:16px;
 }
 .footer-social-icons{
   display:flex;
   justify-content:center;
   gap:14px;
-  margin-bottom:28px;
+  margin-bottom:40px;
 }
 .footer-social-icons a{
   display:flex;
@@ -861,21 +893,25 @@ img,svg{display:block; max-width:100%;}
 .footer-links{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:24px;
   flex-wrap:wrap;
-  margin-bottom:16px;
+  margin-bottom:24px;
 }
 .footer-links a{
   font-family:'Montserrat',sans-serif;
-  font-size:13px;
+  font-size:12px;
+  letter-spacing:0.3px;
   color:var(--text-2);
-  text-decoration:underline;
+  text-decoration:none;
+  border-bottom:1px solid rgba(102,102,96,0.3);
+  padding-bottom:1px;
 }
 .footer-copy{
   font-family:'Montserrat',sans-serif;
-  font-size:12px;
+  font-size:11px;
   color:var(--text-2);
-  opacity:0.7;
+  opacity:0.6;
+  letter-spacing:0.3px;
 }
 .footer-copy a{ color:inherit; }
 </style>
@@ -885,7 +921,7 @@ img,svg{display:block; max-width:100%;}
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x9k7l4daan");
+    })(window, document, "clarity", "script", "xd3b4ewk16");
   </script>
 </head>
 <body>
@@ -911,25 +947,15 @@ img,svg{display:block; max-width:100%;}
           </h1>
         </div>
 
-        <div class="copy">
-          <p>La mayoría de las personas sigue avanzando como siempre.</p>
-          <p>Trabajando.</p>
-          <p>Haciendo planes.</p>
-          <p>Esperando que las piezas eventualmente encajen.</p>
-          <p>Pero cada vez aparece con más frecuencia una sensación difícil de ignorar.</p>
-          <p>La sensación de que algo importante está ocurriendo debajo de la superficie.</p>
-          <p>Y quizá no te hayas dado cuenta, pero sigues usando un mapa que fue creado para una realidad que ya no existe por completo.</p>
-          <p>Vitología nació de una pregunta muy simple:</p>
-          <p>¿Cómo navegamos mejor el mundo en el que estamos mientras todavía está cambiando?</p>
-          <p>Esta no es una clase para aprender términos financieros.</p>
-          <p>Es una conversación para conectar ideas, observar patrones y entender qué está cambiando antes de que resulte evidente para todos.</p>
-          <p>Porque cuando empiezas a ver el mapa completo, las decisiones dejan de sentirse como reacciones.</p>
-          <p>Y empiezan a sentirse como elecciones conscientes.</p>
+        <p class="hero-subtitle">Una conversación para desarrollar un marco mental y entender los cambios que están transformando nuestro mundo.</p>
 
-          <p class="emphasis">La pregunta no es cuánto dinero tienes.</p>
-          <p class="emphasis">La pregunta es qué tan bien entiendes el mundo en el que estás tomando decisiones.</p>
-          <p class="emphasis">Y si todo esto realmente es importante...</p>
-          <p class="emphasis">¿por qué no lo estamos hablando más?</p>
+        <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO MI LUGAR</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
+
+        <div class="video-embed" style="margin-top:20px;margin-bottom:16px;width:100%;max-width:400px;margin-left:auto;margin-right:auto;">
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#666660;margin-bottom:12px;text-align:center;">Toda transformación comienza con una pregunta.</p>
+          <div style="position:relative;padding-bottom:177.77%;height:0;overflow:hidden;border-radius:16px;">
+            <iframe src="https://www.youtube.com/embed/vfsgyqv7CkY" title="¿Por qué existe Vitología?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;"></iframe>
+          </div>
         </div>
 
         <figure class="hero-door">
@@ -945,27 +971,10 @@ img,svg{display:block; max-width:100%;}
           <div class="row price"><span class="icon">💵</span><span>$1,790 MXN</span></div>
         </div>
 
-        <div class="video-embed" style="margin-top:48px;margin-bottom:32px;width:100%;max-width:400px;margin-left:auto;margin-right:auto;">
-          <p style="font-family:'Montserrat',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#666660;margin-bottom:16px;text-align:center;">¿Por qué existe Vitología?</p>
-          <div style="position:relative;padding-bottom:177.77%;height:0;overflow:hidden;border-radius:16px;">
-            <iframe src="https://www.youtube.com/embed/vfsgyqv7CkY" title="¿Por qué existe Vitología?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;"></iframe>
-          </div>
-        </div>
-
-        <a href="https://mpago.la/1NtHJPo" class="cta-btn">Quiero entender el mapa</a>
-
       </div>
 
     </div>
 
-    <div class="counter-block">
-      <p class="counter-label">Las inscripciones cierran el 12 de julio a las 11:59 PM CDMX</p>
-      <div class="counter-grid" id="counter">
-        <div class="counter-item"><div class="counter-num" id="cd-days">—</div><div class="counter-unit">días</div></div>
-        <div class="counter-item"><div class="counter-num" id="cd-hours">—</div><div class="counter-unit">horas</div></div>
-        <div class="counter-item"><div class="counter-num" id="cd-mins">—</div><div class="counter-unit">minutos</div></div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -974,17 +983,21 @@ img,svg{display:block; max-width:100%;}
   <div class="container">
 
     <div class="section-head">
-      <h2 class="section-title">¿Qué es exactamente esto?</h2>
+      <h2 class="section-title">¿Qué obtendrás en nuestra conversación?</h2>
       <div class="section-copy">
-        <p>Una conversación en vivo de 90 minutos para entender algunos de los cambios más importantes que están ocurriendo detrás del dinero.</p>
+        <p>Durante 90 minutos exploraremos algunos de los cambios más importantes que están transformando el sistema financiero mundial. Conectarás eventos que normalmente parecen aislados para entender el contexto detrás de ellos, identificar el cambio estructural que los conecta y comprender cómo afectará esto a nuestro país y a nuestras decisiones durante los próximos años.</p>
       </div>
       <div class="section-list">
-        <p>No es un curso.</p>
-        <p>No es una recomendación de inversión.</p>
-        <p>Y no necesitas conocimientos previos.</p>
+        <p><strong style="color:var(--gold);">Esto NO es</strong></p>
+        <p>• Un curso de economía.</p>
+        <p>• Una clase para aprender a invertir.</p>
+        <p>• Una recomendación financiera.</p>
       </div>
       <div class="section-copy">
-        <p>Es un espacio para conectar los puntos, entender el contexto y desarrollar criterio propio en un momento en que las reglas detrás del dinero están cambiando.</p>
+        <p><strong style="color:var(--gold);">Esto SÍ es</strong></p>
+        <p>• Un marco mental para interpretar los cambios que están transformando nuestro mundo.</p>
+        <p>• Una conversación para conectar los puntos detrás de estos grandes cambios.</p>
+        <p>• Una oportunidad para desarrollar criterio antes de que los cambios resulten evidentes para la mayoría.</p>
       </div>
     </div>
 
@@ -998,13 +1011,13 @@ img,svg{display:block; max-width:100%;}
 
       <div class="pc-price">$1,790 MXN</div>
 
-      <a href="https://mpago.la/1NtHJPo" class="cta-btn">Quiero entender esto antes que la mayoría</a>
+      <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO MI LUGAR</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
 
       <div class="pc-edition">
-        <p>Primera Edición – Miembros Fundadores</p>
-        <p>Solo 30 lugares</p>
-        <p>Reservas cierran el 12 de julio</p>
-        <p>Precio de esta edición: $1,790 MXN</p>
+        <p>Primera Edición · Miembros Fundadores</p>
+        <p>Solo 30 lugares disponibles</p>
+        <p>Precio de lanzamiento: $1,790 MXN</p>
+        <p>Inscripciones abiertas hasta el 12 de julio · 11:59 PM (CDMX)</p>
       </div>
 
       <div class="pc-guarantee">
@@ -1013,72 +1026,6 @@ img,svg{display:block; max-width:100%;}
       </div>
     </div>
 
-  </div>
-</section>
-
-<section class="section-30">
-  <div class="container">
-    <div class="section-head" style="margin-bottom:32px;">
-      <h2 class="section-title">¿Por qué solo 30 lugares?</h2>
-      <div class="section-copy">
-        <p>Porque esto no es un webinar masivo. Prefiero una conversación real. Un grupo pequeño donde las preguntas importan, las respuestas tienen espacio y las ideas pueden explorarse con profundidad.</p>
-      </div>
-    </div>
-    <div class="section-30-row">
-      <span>30 personas</span>
-      <span>Una sala</span>
-      <span>Una conversación</span>
-    </div>
-  </div>
-</section>
-
-<section class="section-why">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">¿Por qué esta conversación importa ahora?</h2>
-      <div class="section-copy">
-        <p>Durante años, lejos de los reflectores, las reglas detrás del dinero comenzaron a cambiar. Gobiernos, instituciones y empresas tecnológicas están destinando enormes recursos y atención a la forma en que el dinero se moverá en el futuro.</p>
-        <p>La mayoría de las personas escucha estos temas por separado. Pero pocas se detienen a preguntarse qué es exactamente lo que está cambiando.</p>
-      </div>
-    </div>
-
-    <p class="pull-quote">Piensa en lo que ocurrió cuando los teléfonos pasaron de ser una línea fija de casa a convertirse en un smartphone. Al principio parecía una mejora más. Pero con el tiempo esa mejora cambió la forma en que trabajamos, compramos, nos comunicamos y vivimos.</p>
-
-    <div class="section-head" style="margin-top:32px;">
-      <div class="section-copy">
-        <p>Algo similar está ocurriendo con el dinero. Y eso es precisamente lo que exploraremos en esta conversación: hacia dónde podría dirigirse el dinero y por qué vale la pena prestar atención ahora.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="transformation">
-  <div class="container">
-    <div class="section-head">
-      <h2 class="section-title">¿Qué cambia después de esta conversación?</h2>
-    </div>
-    <div class="transform-grid">
-      <div class="transform-col before">
-        <p class="transform-label">Antes de Vitología</p>
-        <ul>
-          <li>Ves noticias aisladas.</li>
-          <li>Escuchas opiniones contradictorias.</li>
-          <li>Sientes que algo está cambiando.</li>
-          <li>No sabes exactamente qué está pasando.</li>
-          <li>Tomas decisiones con información fragmentada.</li>
-        </ul>
-      </div>
-      <div class="transform-col after">
-        <p class="transform-label">Después de Vitología</p>
-        <ul>
-          <li>Entiendes qué fuerzas están impulsando los cambios.</li>
-          <li>Empiezas a conectar eventos que antes parecían independientes.</li>
-          <li>Desarrollas mejores preguntas.</li>
-          <li>Interpretas las noticias con más contexto.</li>
-          <li>Tomas decisiones desde la comprensión y no desde la confusión.</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1091,24 +1038,121 @@ img,svg{display:block; max-width:100%;}
 
       <figure class="story-photo">
         <img src="logo/marisol-biblioteca.jpg" alt="Marisol investigando en la biblioteca, libreta en mano">
-        <figcaption>Marisol — investigando en la biblioteca donde nació Vitología</figcaption>
+        <figcaption>Marisol investigando en la biblioteca donde nació Vitología.</figcaption>
       </figure>
 
       <div class="story-inner">
-        <p>De niña recuerdo ver anuncios por todas partes que decían: "Compro acciones de TELMEX". Siempre tuve curiosidad por entender qué significaban y por qué parecían tan importantes para algunas personas. Le pregunté a mi mamá. Le pregunté a otros adultos. Nadie supo explicármelo.</p>
-        <p>Años después me gradué de Administración Financiera. Aprendí cómo funcionaban los mercados, las acciones y muchas otras cosas técnicas. Pero seguía sin entender algo fundamental: ¿Por qué nadie hablaba de esto de una forma que una persona común pudiera entender?</p>
-        <p>Años más tarde, embarazada, viviendo en un país distinto al mío y preocupada por mi futuro financiero, decidí buscar ayuda. Agendé una llamada con una empresa de educación financiera porque pensé que finalmente encontraría una guía para empezar a construir patrimonio.</p>
-        <p><strong>Cancelaron la llamada.</strong></p>
+        <p>De niña recuerdo ver anuncios por todas partes que decían:</p>
+        <p><strong>"Compro acciones TELMEX."</strong></p>
+        <p>Siempre tuve curiosidad por entender qué eran las acciones y por qué parecían tan importantes para algunas personas.</p>
+        <p>Le pregunté a mi mamá.</p>
+        <p>Le pregunté a otros adultos.</p>
+        <p>Nadie supo explicármelo.</p>
+        <p>Años después estudié Administración Financiera.</p>
+        <p>Aprendí cómo funcionan los mercados, las acciones y otros muchos conceptos técnicos.</p>
+        <p>Pero seguía haciéndome la misma pregunta:</p>
+        <p><strong>¿Por dónde empiezo?</strong></p>
+        <p>Tiempo después, embarazada, viviendo en otro país y preocupada por mi futuro financiero, decidí buscar ayuda.</p>
+        <p>Agendé una llamada con una empresa de educación financiera.</p>
+        <p>Días después recibí un correo.</p>
+        <p><strong>La llamada fue cancelada.</strong></p>
 
         <div class="story-quote">
-          <p>"Gracias por tu interés. No creemos ser las personas adecuadas para ayudarte en este momento."</p>
+          <p>"No creemos ser las personas adecuadas para ayudarte en este momento."</p>
         </div>
 
-        <p>No te voy a negar que leer eso fue frustrante, pero hoy estoy convencida que fue una de las mejores cosas que me pudieron pasar. Tenía el tiempo y tenía preguntas, así que decidí investigar por mi cuenta.</p>
-        <p>En poco más de un año aprendí más sobre dinero, patrimonio y construcción de riqueza que en años de educación formal. Pero sobre todo entendí algo: muchas veces la respuesta no es más información. Es tener un espacio para hacer mejores preguntas.</p>
-        <p>Y fue precisamente esa búsqueda la que terminó cambiando el rumbo de mi vida. Lo que comenzó como una inquietud personal terminó convirtiéndose en una obsesión por entender cómo funciona realmente el dinero y por qué tan pocas personas tienen acceso a conversaciones como esta.</p>
+        <p>Ese día entendí que, si quería respuestas, probablemente tendría que encontrarlas por mi cuenta.</p>
+        <p>Con el tiempo descubrí algo que terminó cambiando por completo mi forma de entender el dinero.</p>
+        <p>Muchas veces el problema no es la falta de información.</p>
+        <p>La información está ahí.</p>
+        <p>Pero está fragmentada, sesgada y, sobre todo, desprovista de contexto.</p>
+        <p>Nos enseñan respuestas para preguntas que el mundo ya dejó atrás.</p>
+        <p>Mientras todos siguen hablando de acciones, los cambios más importantes ya están ocurriendo en otro lugar.</p>
+        <p>Entonces comprendí que aquello no era únicamente un problema del dinero.</p>
+        <p>Era un patrón.</p>
+        <p>Vivimos en un mundo que cambia más rápido de lo que aprendemos a interpretarlo.</p>
+        <p>Vitología nació de esa búsqueda.</p>
+        <p>No para seguir noticias.</p>
+        <p>No para reaccionar cuando todos ya están hablando de un tema.</p>
+        <p>Sino para desarrollar un marco mental que nos permita interpretar los cambios mientras todavía están ocurriendo.</p>
+        <p>Porque las personas siguen intentando responder las preguntas de ayer, mientras el mundo ya cambió de examen.</p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="section-why">
+  <div class="container">
+
+    <div class="section-head" style="margin-bottom:16px;">
+      <h2 class="section-title">¿Qué está cambiando realmente?</h2>
+    </div>
+
+    <figure style="margin:0 0 24px;width:100%;max-width:900px;margin-left:auto;margin-right:auto;">
+      <img src="logo/telefono-comparativa.jpg" alt="Antes: teléfono fijo. Ahora: smartphone." style="width:100%;display:block;border-radius:12px;">
+    </figure>
+
+    <div class="section-head" style="margin-bottom:24px;">
+      <div class="section-copy">
+        <p>Piensa en la última vez que usaste un teléfono fijo.</p>
+        <p>Probablemente ni siquiera lo recuerdes.</p>
+        <p>No desapareció de un día para otro.</p>
+        <p>Simplemente dejó de ser la mejor forma de comunicarnos.</p>
+        <p>Hoy usamos el teléfono prácticamente las 24 horas del día.</p>
+        <p>Pero nadie quiere volver a hacer una llamada desde un teléfono fijo.</p>
+        <p>Eso mismo está ocurriendo con el dinero.</p>
+        <p>No necesitas adivinar el futuro.</p>
+        <p>Necesitas aprender a reconocer los cambios mientras todavía están ocurriendo.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:8px;">
+      <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO ENTENDER ESTE CAMBIO</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
+    </div>
+
+  </div>
+</section>
+
+<section class="transformation">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Una nueva forma de interpretar el mundo</h2>
+    </div>
+    <div class="transform-grid">
+      <div class="transform-col before">
+        <p class="transform-label">Antes de Vitología</p>
+        <ul>
+          <li>Ves eventos aislados.</li>
+          <li>Reaccionas a los titulares.</li>
+          <li>Intentas entender cada noticia por separado.</li>
+        </ul>
+      </div>
+      <div class="transform-col after">
+        <p class="transform-label">Después de Vitología</p>
+        <ul>
+          <li>Identificas patrones.</li>
+          <li>Comprendes el contexto.</li>
+          <li>Interpretas los cambios con mayor claridad.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-30">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:32px;">
+      <h2 class="section-title">¿Por qué una conversación pequeña?</h2>
+      <div class="section-copy">
+        <p>Porque esto no es un webinar masivo.</p>
+        <p>Prefiero una conversación donde las preguntas importen, las ideas puedan explorarse con calma y cada persona tenga espacio para participar.</p>
+      </div>
+      <div class="section-closing-trio" style="margin-top:32px;text-align:center;">
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--text-1);line-height:1.4;margin-bottom:14px;">30 personas.</p>
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--text-1);line-height:1.4;margin-bottom:14px;">Una sala.</p>
+        <p style="font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:var(--text-1);line-height:1.4;margin-bottom:0;">Una conversación.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1116,56 +1160,12 @@ img,svg{display:block; max-width:100%;}
 <section class="includes">
   <div class="container">
     <div class="section-head">
-      <h2 class="section-title">¿Qué incluye tu lugar?</h2>
-      <div class="section-copy"><p>Al reservar tu lugar tendrás acceso a:</p></div>
+      <h2 class="section-title">¿Qué sucede cuando reservas tu lugar?</h2>
     </div>
 
-    <div class="includes-list">
-      <div class="include-item">
-        <span class="include-num">01</span>
-        <div class="include-body">
-          <h3>Clase magistral en vivo — 90 minutos</h3>
-          <p>Una conversación diseñada para ayudarte a entender algunos de los cambios más importantes que están ocurriendo detrás del dinero. Exploraremos algunas de las señales que están transformando el sistema financiero y por qué tantos gobiernos, instituciones y empresas alrededor del mundo le están prestando tanta atención.</p>
-          <p>No desde la teoría. No desde el miedo. Y mucho menos desde predicciones. Sino desde el contexto. Porque cuando entiendes el contexto, los titulares dejan de parecer eventos aislados y comienzas a ver cómo encajan entre sí.</p>
-        </div>
-      </div>
-      <div class="include-item">
-        <span class="include-num">02</span>
-        <div class="include-body">
-          <h3>Una nueva forma de interpretar lo que está ocurriendo</h3>
-          <p>Más que respuestas, obtendrás un marco mental para analizar las conversaciones que marcarán los próximos años. La meta no es que adoptes mis conclusiones. La meta es que desarrolles mejores preguntas y más criterio para llegar a las tuyas.</p>
-        </div>
-      </div>
-      <div class="include-item">
-        <span class="include-num">03</span>
-        <div class="include-body">
-          <h3>Espacio de preguntas y respuestas en vivo</h3>
-          <p>Las mejores conversaciones suelen comenzar cuando termina la presentación. Tendrás la oportunidad de plantear preguntas, explorar ideas y profundizar en los temas que más llamen tu atención.</p>
-        </div>
-      </div>
-      <div class="include-item">
-        <span class="include-num">04</span>
-        <div class="include-body">
-          <h3>Acceso a la grabación completa</h3>
-          <p>La sesión quedará grabada para que puedas revisarla nuevamente a tu ritmo y regresar a los conceptos que quieras explorar con mayor profundidad.</p>
-        </div>
-      </div>
-      <div class="include-item">
-        <span class="include-num">05</span>
-        <div class="include-body">
-          <h3>Continuidad después de la clase</h3>
-          <p>Las mejores preguntas rara vez aparecen durante la conversación. Aparecen después. Cuando procesas una idea. Cuando conectas algo que antes no habías visto.</p>
-          <p>Por eso esta conversación no termina cuando se cierra la sesión de Zoom. Tendrás acceso a un espacio privado de seguimiento donde podremos continuar explorando preguntas, ideas y reflexiones que surjan después de la Clase Magistral.</p>
-        </div>
-      </div>
-      <div class="include-item">
-        <span class="include-num">06</span>
-        <div class="include-body">
-          <h3>Acceso prioritario a futuras conversaciones</h3>
-          <p>Esta es la primera edición de Vitología. Los participantes de esta edición tendrán prioridad para participar en futuras conversaciones, sesiones y espacios que se vayan construyendo a partir de esta comunidad.</p>
-        </div>
-      </div>
-    </div>
+    <figure style="margin:0 0 40px;width:100%;max-width:900px;margin-left:auto;margin-right:auto;">
+      <img src="logo/incluye-cards.jpg" alt="¿Qué sucede cuando reservas tu lugar? Acceso a la conversación en vivo, espacio de preguntas, grabación, materiales y comunidad privada." style="width:100%;display:block;border-radius:12px;">
+    </figure>
 
     <div class="includes-recap">
       <div class="event-info">
@@ -1176,7 +1176,7 @@ img,svg{display:block; max-width:100%;}
         <div class="row price"><span class="icon">💵</span><span>$1,790 MXN</span></div>
       </div>
       <p class="includes-recap-sub">Primera edición – Miembros fundadores<br>90 minutos en vivo + grabación completa + seguimiento posterior a la sesión</p>
-      <a href="https://mpago.la/1NtHJPo" class="cta-btn">Quiero mi lugar — $1,790 MXN</a>
+      <a href="https://mpago.la/1NtHJPo" class="cta-btn"><span>QUIERO MI LUGAR</span><span style="font-size:13px;font-weight:400;letter-spacing:0.3px;opacity:0.9;margin-top:3px;">$1,790 MXN</span></a>
     </div>
   </div>
 </section>
@@ -1189,7 +1189,7 @@ img,svg{display:block; max-width:100%;}
     <div class="faq-list">
       <details class="faq-item">
         <summary>¿Necesito saber de economía para asistir?</summary>
-        <p>No. La clase está diseñada para personas curiosas que quieren entender mejor lo que está ocurriendo, independientemente de su nivel de conocimiento previo.</p>
+        <p>No. La conversación está diseñada para personas curiosas que quieren entender mejor lo que está ocurriendo, independientemente de su nivel de conocimiento previo.</p>
       </details>
       <details class="faq-item">
         <summary>¿Necesito invertir o tener experiencia financiera?</summary>
@@ -1205,7 +1205,7 @@ img,svg{display:block; max-width:100%;}
       </details>
       <details class="faq-item">
         <summary>¿La sesión quedará grabada?</summary>
-        <p>Sí. Después de la clase recibirás acceso a la grabación de la Clase Magistral para que puedas revisarla nuevamente a tu ritmo.</p>
+        <p>Sí. Recibirás acceso a la grabación para verla nuevamente a tu ritmo.</p>
       </details>
     </div>
   </div>
@@ -1213,7 +1213,7 @@ img,svg{display:block; max-width:100%;}
 
 <section class="final-cta">
   <div class="container">
-    <p class="final-cta-line">El dinero nunca volverá a ser como antes.<br>La pregunta es si empezarás a entender por qué antes que la mayoría.</p>
+    <p class="final-cta-line">El mundo seguirá cambiando.<br>La única pregunta es si tú cambiarás con él.</p>
     <div class="event-info">
       <div class="row"><span class="icon">📅</span><span>14 de julio</span></div>
       <div class="row"><span class="icon">🕖</span><span>7:00 PM CDMX</span></div>
@@ -1221,16 +1221,24 @@ img,svg{display:block; max-width:100%;}
       <div class="row"><span class="icon">💻</span><span>En vivo por Zoom</span></div>
       <div class="row price"><span class="icon">💵</span><span>$1,790 MXN</span></div>
     </div>
-    <a href="https://mpago.la/1NtHJPo" class="cta-btn">Reservar mi lugar — $1,790 MXN</a>
+    <a href="https://mpago.la/1NtHJPo" class="cta-btn">QUIERO MI LUGAR</a>
+    <div class="counter-block" style="margin-top:40px;">
+      <p class="counter-label">Las inscripciones cierran en:</p>
+      <div class="counter-grid" id="counter">
+        <div class="counter-item"><div class="counter-num" id="cd-days">—</div><div class="counter-unit">días</div></div>
+        <div class="counter-item"><div class="counter-num" id="cd-hours">—</div><div class="counter-unit">horas</div></div>
+        <div class="counter-item"><div class="counter-num" id="cd-mins">—</div><div class="counter-unit">minutos</div></div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <footer class="site-footer">
   <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px;">
     <img class="footer-logo-icon" src="logo/icon-mark.png" alt="Vitología">
     <p class="footer-brand-name">VITOLOGÍA</p>
     <p class="footer-tagline">Patrones. Contexto. Claridad.</p>
-    <p class="footer-social-label">Síguenos en nuestras redes sociales</p>
     <div class="footer-social-icons">
       <a href="https://www.instagram.com/vitologiaoficial?igsh=MTVubmJ3aTZoc3RtNA==" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
